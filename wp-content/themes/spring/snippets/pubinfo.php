@@ -1,0 +1,1 @@
+<div class="pub-info"><i class="fa fa-calendar-o"></i><time pubdate="pubdate"><?php the_modified_date(); ?></time> <!--i class="fa fa-thumb-tack"></i--><?php //the_category(', '); ?> <i class="fa fa-tags"></i><?php the_tags(' '); ?></div>

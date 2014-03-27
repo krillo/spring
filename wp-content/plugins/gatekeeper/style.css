@@ -1,0 +1,99 @@
+/*
+	GATEKEEPER STYLESHEET
+	Author: Jamie Wilson
+	Copyright © 2011-2013 Jamie Wilson (wpdev@jamiewilson.net)
+*/
+
+.gk-rounded {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.gk-section-title {
+	background-color: #dfdfdf;
+	font: bold 16px sans-serif;
+	margin: 20px 0 5px 0;
+	padding: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;x;
+	}
+
+.gk-option-table textarea {
+	width: 400px;
+	}
+	
+#gk-active-notifier {
+	background-color: red; 
+	border: 1px solid rgb(119,119,119);
+	color: white;
+	float: right;
+	font-size: 12px;
+	line-height: 22px;
+	font-weight: bold;
+	height: 22px;
+	margin: 0 2px; 
+	padding: 0px 6px;
+	text-shadow: rgba(0, 0, 0, 0.3) 1px 0.8;
+	
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-radius-bottomleft: 5px;
+	-webkit-border-radius-bottomright: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+	#gk-active-notifier a {
+		color: white;
+		text-decoration: none;
+	}
+
+#gk-main {
+	float: left;
+	}
+	
+#gk-sidebar {
+	float: right;
+	margin: 0px 10px 20px 20px; 
+	width: 280px; 
+	}
+	
+#gk-sidebar .gk-container {
+	border: 1px solid #dfdfdf;
+	margin-bottom: 10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	}
+	
+#gk-sidebar .gk-section-title {
+	background-color: #dfdfdf;
+	font: bold 16px sans-serif;
+	margin: 0 0 5px 0;
+	padding: 5px;
+	-moz-border-topleft-radius: 5px;
+	-moz-border-topright-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-rightradius: 5px;
+	border-radius: 5px 5px 0 0;
+	}
+	
+.gk-sidebar-content {
+	padding: 5px;
+	}
+	
+#gk-status {
+	border: 1px solid black;
+	color: white;
+	font-size: 14px; 
+	font-weight: bold; 
+	height: 14px; 
+	padding: 5px;
+	text-transform: uppercase; 
+	width: 100%; 
+	
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	}

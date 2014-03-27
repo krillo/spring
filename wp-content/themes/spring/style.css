@@ -1,0 +1,66 @@
+/*
+Theme Name: Spring
+Version: 1.0
+Description: This is the theme for magasinspring.se It is a childtheme to Reptilo which is based on Bootstrap 3, The theme won't work without Reptilo 
+Author: Kristian Erendi, Henric Jöraas
+Author URI: http://reptilo.se http://www.oresundswebb.se/  
+Template: reptilo
+*/
+@import url("../reptilo/style.css");
+/* @import url("style.henke.css"); */
+@import url("style.mashmenu.css");
+
+/*
+@media (max-width: 483px) {
+div#logo a{font-size: 40px;}
+div#headline-puff{height:90px;}
+.spotlight img{display:none;}
+}
+
+@media (min-width: 484px) and (max-width: 991px) {
+div#headline-puff{height:75px;}
+}
+*/
+
+body{color: #222;font-family: 'Open Sans', sans-serif;background-color: #f6f6f6;}
+body.home {background-image: none;}
+img, article img {background-color: transparent;border: none;padding: 4px;}
+.container {
+  width: 1170px;
+  border: solid #BEBEBE;
+  border-width: 0 1px 1px;
+  background: #FFF;
+  box-shadow: 0 1px 5px 0 #c1c1c1;
+}
+
+/*pub-info*/
+.pub-info{color: #C0BEBE;padding-bottom: 30px;font-size: 13px;}
+.pub-info-small{color: #C0BEBE;padding-bottom: 0;font-size: 11px;display:none;}
+.pub-info-small i{margin-right: 4px;}
+.pub-info i{margin-left: 20px;margin-right: 4px;}
+.pub-info i.fa-calendar-o{margin-left: 0;}
+
+.article-cat, .article-cat a{font-weight: bold;color:#f59d00;}
+.read-more{color:#f59d00;}
+
+
+/*sidebar header*/
+.sidebar-header{
+  background-image: url("img/bg_sidebar.png");
+  background-repeat: repeat-y;
+  width: 100%;
+  font-size: 14px;
+  color: #FFF;
+  padding-left: 7px;
+  padding: 3px 0 3px 7px;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  list-style: none;
+  margin-bottom: 8px;
+}
+div.sidebar-header i{padding-right: 1px; font-size: 16px;}
+li.widget{list-style: none;margin-bottom: 25px;font-size: 12px;}
+li.widget {list-style: none;margin-bottom: 25px;}
+
+/*omslag*/
+.omslag, .omslag-text{float:left;}

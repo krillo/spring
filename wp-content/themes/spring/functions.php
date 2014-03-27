@@ -1,0 +1,190 @@
+<?php
+
+/**
+ * Spring
+ * Author: Kristian Erendi
+ * Author URI: http://reptilo.se/
+ * Date: 2014-02-07
+ * @package WordPress
+ * @subpackage spring
+ * @since Spring 1.0
+ */
+include_once 'bin/Prenpuff.php';
+include_once 'bin/Omslag.php';
+//include_once get_template_directory() . "/bin/ReptiloCarousel.php";
+//include_once get_template_directory() . "/bin/ReptiloFAQ.php";
+
+/*Henric*/
+add_theme_support( "pay_with_a_like_style" );
+
+
+/**
+ * custom size for images
+ */
+if ( function_exists( 'add_image_size' ) ) { 
+	add_image_size('bokomslag', 45, 70, true);
+}
+
+
+function spring_widgets_init() {
+  register_sidebar(array(
+      'name' => __('Sidebar 1'),
+      'id' => 'sidebar1',
+      'before_title' => '<div class="sidebar-header"><i class="fa fa-caret-right"></i> ',
+      'after_title' => '</div>'
+  ));
+    register_sidebar(array(
+        'name' => __('Sidebar 1.1'),
+        'id' => 'sidebar11',
+        'before_title' => '<div class="sidebar-header"><i class="fa fa-caret-right"></i> ',
+        'after_title' => '</div>'
+    ));
+  register_sidebar(array(
+      'name' => __('Sidebar 2'),
+      'id' => 'sidebar2',
+      'before_title' => '<div class="sidebar-header"><i class="fa fa-caret-right"></i> ',
+      'after_title' => '</div>'
+  ));
+}
+
+add_action('widgets_init', 'spring_widgets_init');
+
+
+
+
+
+/**
+ * Enqueues scripts and styles for frontend.
+ */
+function spring_enqueue_scripts() {
+  wp_enqueue_style('style.henke', get_template_directory() . '/css/style.henke.css', array('woodojo-social-widgets'  ), '2014-03-26');
+  //wp_enqueue_style('style.henke.css', get_stylesheet_uri(), array('font_awesome'  ), '2014-03-27');
+}
+add_action('wp_enqueue_scripts', 'spring_enqueue_scripts');
+
+
+//add_action( 'wp_enqueue_scripts', array(&$this, 'theme_styles'), 99 );
+
+
+/**
+ * Display posts from:
+ * 1. post type
+ * 2. nbr
+ * 3. random order or latest
+ *  
+ * @global Post $post
+ * @param string $posttype
+ * @param int $nbr
+ * @param boolean $random
+ */
+function spring_printPostsPerPosttype($posttype = 'litteraturtips', $nbr = 1, $random = false, $nbrDigits = 40) {
+  global $post;
+  $args = array('post_type' => $posttype, 'posts_per_page' => $nbr);
+  if ($random) {
+    $args['orderby'] = 'rand';
+  }
+  $loop = new WP_Query($args);
+  if ($loop->have_posts()):
+    $i = 0;
+    while ($loop->have_posts()) : $loop->the_post();
+      if($i % 2 == 0){
+        $zebra_class = 'zebra'; 
+      } else {
+        $zebra_class = ''; 
+      }
+      $i++;  
+      $img = wp_get_attachment_image(get_field('bild'), 'bokomslag');
+      $title = mb_substr(get_the_title(), 0, 32). '..';
+      $author = mb_substr(get_field('forfattare'), 0, 32). '..';
+      $text = mb_substr(get_field('text'), 0, 32);
+      $text = $text == ''? $text : $text. '..';
+      $url = get_field('isbn');  //notis its is now a link!!
+      $readingbox .= <<<RB
+        <div class="posttype-container $zebra_class">
+          <div class="posttype-img">
+            $img
+          </div>        
+          <div class="posttype-content">
+            <b>$title</b><br/>
+            $author<br/>
+            $text<br/>
+            <a href="$url" target="_blank" class="">Läs mer om boken</a>
+          </div>
+        </div>              
+RB;
+    endwhile;
+  endif;
+  wp_reset_query();
+  echo $readingbox;
+}
+
+/**
+ * Display posts from a category.
+ * Bootstrap 3 style
+ * 
+ * @global type $post
+ * @param type $category  - the slug
+ * @param type $nbr - nbr of posts to show
+ */
+function spring_printPostsPerCat($category = 'aktuellt', $nbr = 1, $offset = 0, $nbrDigits = 100, $extraclass = '', $nbrDigitsTitle = 30) {
+  global $post;
+  $nbr = $nbr + $offset;
+  $args = array('category_name' => $category, 'posts_per_page' => $nbr);
+  $loop = new WP_Query($args);
+  if ($loop->have_posts()):
+    $i = 0;
+    while ($loop->have_posts()) : $loop->the_post();
+      if ($i >= $offset) {
+        $guid = get_permalink();
+        if ($extraclass == 'cat-minimum') {  //small version
+          if(strlen(get_the_title()) > $nbrDigitsTitle){
+            $title = mb_substr(get_the_title(), 0, $nbrDigitsTitle).'...';
+          } else {
+            $title = get_the_title();
+          }
+          $content = mb_substr(get_the_excerpt(), 0, $nbrDigits) . ' &nbsp;' . '<a href="' . $guid . '" target="" class="">Läs mer...</a>';
+        } else {
+          $title = get_the_title();
+          $content = mb_substr(get_the_excerpt(), 0, $nbrDigits) . '...' . '<br/><a href="' . $guid . '" target="" class="btn btn-default btn-xs">Läs mer</a>';
+        }
+        $modified_date = get_the_modified_date();
+        $author = get_the_author();
+        $the_tags = '';
+        $posttags = get_the_tags();
+        if ($posttags) {
+          foreach ($posttags as $tag) {
+            $the_tags .= $tag->name . ' ';
+          }
+        }
+        $img = '';
+        if (has_post_thumbnail()) {
+          $img = get_the_post_thumbnail(null, 'profile-thumb');
+        }
+        $readingbox .= <<<RB
+<div class="cat-container $extraclass">
+  <section>
+    <h2><a href="$guid">$title</a></h2>
+    <div class="pub-info"><i class="fa fa-calendar-o"></i><time pubdate="pubdate">$modified_date</time> <i class="fa fa-tags"></i>$the_tags</div>
+    <div class="pub-info-small"><i class="fa fa-calendar-o"></i><time pubdate="pubdate">$modified_date</time></div>
+    <div>
+      $img
+      <div class="cat-content">
+        $content
+      </div>
+    </div>
+  </section>
+</div>
+RB;
+      }
+      $i++;
+    endwhile;
+  endif;
+  wp_reset_query();
+  echo $readingbox;
+}
+
+
+
+
+
+
