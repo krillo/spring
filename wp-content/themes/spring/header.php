@@ -43,7 +43,7 @@
     <div class="container">
       <div class="row clearfix">
         <div class="col-sm-12 column">
-          <img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/tmp/banner_930.png" />
+          <img alt="" src="<?php  echo get_stylesheet_directory_uri(); ?>/tmp/banner_930.png" />
         </div>
       </div>
       <div class="row clearfix">

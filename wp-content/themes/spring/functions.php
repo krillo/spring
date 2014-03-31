@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Spring
  * Author: Kristian Erendi
@@ -57,13 +56,10 @@ add_action('widgets_init', 'spring_widgets_init');
  * Enqueues scripts and styles for frontend.
  */
 function spring_enqueue_scripts() {
-  wp_enqueue_style('style.henke', get_template_directory() . '/css/style.henke.css', array('woodojo-social-widgets'  ), '2014-03-26');
-  //wp_enqueue_style('style.henke.css', get_stylesheet_uri(), array('font_awesome'  ), '2014-03-27');
+  wp_enqueue_style('style.henke', get_stylesheet_directory_uri() . '/css/style.henke.css', array('woodojo-social-widgets', 'fbSEOwpcomments', 'fbSEOStylesheet', 'style', 'font_awesome', 'thickbox'  ), '2014-03-26');
+  wp_enqueue_style('style.mashmenu', get_stylesheet_directory_uri() . '/css/style.mashmenu.css', array('woodojo-social-widgets', 'fbSEOwpcomments', 'fbSEOStylesheet', 'style', 'font_awesome', 'thickbox'  ), '2014-03-26');
 }
 add_action('wp_enqueue_scripts', 'spring_enqueue_scripts');
-
-
-//add_action( 'wp_enqueue_scripts', array(&$this, 'theme_styles'), 99 );
 
 
 /**

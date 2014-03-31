@@ -5,9 +5,9 @@
  * hover color: #DDF0F9
  * channel title: #C7E6F5
 */
-.mashmenu {position: fixed;top: 0;left: 0;width: 100%;z-index: 1000;box-shadow: 0 1px 5px 0 #c1c1c1; border: solid #c1c1c1;border-width: 0 1px 1px; background:#fcbe00;}
+.mashmenu {position: fixed;top: 0;left: 0;width: 100%;z-index: 1000;box-shadow: 0 1px 5px 0px #858585;background:#fcbe00;}
 
-.mashmenu img.mlogo{display:inline-block !important; padding-top: 10px;}
+.mashmenu img.mlogo{display:inline-block !important; padding: 0px; width:200px;}
 .mashmenu div.mlogo{margin:0 20px 0 0}
 .mashmenu .logo a{display:inline-block}
 .mashmenu .logo a:hover{background:none}
@@ -17,7 +17,7 @@
 .mashmenu .mod.right{float:right;border-left:1px solid rgba(0,0,0,0.15)}
 .mashmenu .mod>a{color:#FFF;text-decoration:none;padding:0 20px;}
 .mashmenu .mod .head i{font-size:18px;line-height:46px}
-.mashmenu .mod .mod-content{display:none;position:absolute;top:initial;right:0;background:#fff; box-shadow: 0 1px 5px 0 #c1c1c1; border-bottom:3px solid #fcbe00;padding:10px 20px;color:#333;min-width:240px}
+.mashmenu .mod .mod-content{display:none;position:absolute;top:initial;right:0;background:#fff; box-shadow: 0 1px 5px 0px #858585; border-bottom:3px solid #fcbe00;padding:10px 20px;color:#333;min-width:240px}
 .mashmenu .mod .mod-content h3{margin:0;padding:0}
 .mashmenu .mod:hover{background:#fff}
 .mashmenu .mlogo:hover{background:none}
@@ -27,7 +27,7 @@
 .mashmenu .menu{list-style:none;margin:0;padding:0;display:inline-block;vertical-align:top}
 .mashmenu .menu>li{display:inline;margin:0;position:initial}
 .mashmenu .menu>li>a{display:inline-block;padding:10px 10px;color:#FFF;font-family:'Open Sans', sans-serif;font-weight: bold; font-size:14px;text-transform:none;position:relative;line-height:2em;letter-spacing: 1px;}
-.mashmenu .menu .sub-content{display:none;width:100%;position:absolute;background:#FFFFFF;box-shadow: 0 1px 5px 0 #c1c1c1; border-bottom:3px solid #fcbe00;left:0;top:initial}
+.mashmenu .menu .sub-content{display:none;width:100%;position:absolute;background:#FFFFFF;box-shadow: 0 1px 5px 0 #858585; border-bottom:3px solid #fcbe00;left:0;top:initial}
 .mashmenu .menu .sub-content.sub-content-active{display:block !important}
 .mashmenu .menu li.level0:hover>a{background:#FFFFFF;color:#fcbe00}
 .mashmenu .sub-channel{display:inline-block;width:200px;margin:0;padding:10px 0 0 0	;height:205px;vertical-align:top;background:#fcbe00}

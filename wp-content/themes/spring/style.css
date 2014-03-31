@@ -7,7 +7,6 @@ Author URI: http://reptilo.se http://www.oresundswebb.se/
 Template: reptilo
 */
 @import url("../reptilo/style.css");
-/* @import url("style.henke.css"); */
 @import url("style.mashmenu.css");
 
 /*
@@ -24,7 +23,7 @@ div#headline-puff{height:75px;}
 
 body{color: #222;font-family: 'Open Sans', sans-serif;background-color: #f6f6f6;}
 body.home {background-image: none;}
-img, article img {background-color: transparent;border: none;padding: 4px;}
+img, article img {background-color: transparent;border: none;padding: 4px;width:100%;}
 .container {
   width: 1170px;
   border: solid #BEBEBE;

@@ -1,16 +1,7 @@
-<?php
-/**
- * 
- * @author Kristain Erendi
- * @subpackage Template
- * 
- */
-get_header();
-?>
+<?php get_header(); ?>
 <div class="row clearfix">
   <div class="col-sm-6 column">
     <?php
-    query_posts();
     if (have_posts()) : while (have_posts()) : the_post();
         ?>
         <div class="row">
