@@ -7,8 +7,9 @@
         <div class="row">
           <div class="col-sm-12">
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-              <?php the_post_thumbnail(); ?>
+              <?php the_post_thumbnail('medium'); ?>
               <h1><?php the_title(); ?></h1>
+              <?php the_content(); ?>
               <p><span class="article-cat"><?php the_category(', '); ?></span>&nbsp;&nbsp;<?php echo get_the_excerpt(); ?>
                 <a href="<?php the_permalink(); ?>" ><span class="read-more">Läs mer <i class="fa fa-angle-double-right"></i></span></a></p>
               <?php include('snippets/pubinfo.php'); ?>

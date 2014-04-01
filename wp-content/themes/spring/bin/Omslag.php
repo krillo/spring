@@ -66,9 +66,12 @@ class Omslag {
     if ($loop->have_posts()):
       while ($loop->have_posts()) : $loop->the_post();
         $id = $post->ID;
-        $img = get_the_post_thumbnail($id, array(90,115));
+        //$img = get_the_post_thumbnail($id, array(90,115));
+        $img = get_the_post_thumbnail($id, array(90, 'auto'));
+        //$img = get_the_post_thumbnail($id);
         $number = get_field('nummer');
         $year = get_field('year');
+/*        
         $out .= <<<OUT
         <div class="omslag">
           $img
@@ -83,6 +86,22 @@ class Omslag {
             </ul>    
         </div>              
 OUT;
+*/        
+        
+        
+        $out .= <<<OUT
+                $img               
+ <!--img  src="http://spring.dev/wp-content/uploads/2014/03/Spring_1_20141-118x150.jpeg" class="attachment-90x115 wp-post-image" alt="Spring_1_2014" style="max-width:115px;float:left;"-->
+                <h2>Aktuellt nummer</h2>
+                <span class="omslag-nummer" style="">Spring / Nr $number / $year </span>
+                <ul>    
+                  <li><i class="fa fa-caret-right"></i><a href="#">Se hela innehållet</a></li>
+                  <li><i class="fa fa-caret-right"></i><a href="#">Prenumerera på Spring</a></li>
+                  <li><i class="fa fa-caret-right"></i><a href="#">Läs tidningen digitalt som prenumerant</a></li>
+                </ul>    
+OUT;
+ 
+                
       endwhile;
     endif;
     wp_reset_query();
