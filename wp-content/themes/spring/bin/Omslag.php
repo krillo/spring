@@ -71,37 +71,36 @@ class Omslag {
         //$img = get_the_post_thumbnail($id);
         $number = get_field('nummer');
         $year = get_field('year');
-/*        
-        $out .= <<<OUT
-        <div class="omslag">
+        /*
+          $out .= <<<OUT
+          <div class="omslag">
           $img
-        </div>              
-        <div class="omslag-text">
+          </div>
+          <div class="omslag-text">
           <h2>Aktuellt nummer</h2>
           <div class="omslag-nummer">Spring / Nr $number / $year </div>
-            <ul>    
-              <li><i class="fa fa-caret-right"></i><a href="#">Se hela innehållet</a></li>
-              <li><i class="fa fa-caret-right"></i><a href="#">Prenumerera på Spring</a></li>
-              <li><i class="fa fa-caret-right"></i><a href="#">Läs tidningen digitalt som prenumerant</a></li>
-            </ul>    
-        </div>              
-OUT;
-*/        
-        
-        
+          <ul>
+          <li><i class="fa fa-caret-right"></i><a href="#">Se hela innehållet</a></li>
+          <li><i class="fa fa-caret-right"></i><a href="#">Prenumerera på Spring</a></li>
+          <li><i class="fa fa-caret-right"></i><a href="#">Läs tidningen digitalt som prenumerant</a></li>
+          </ul>
+          </div>
+          OUT;
+         */
+
+
         $out .= <<<OUT
                 $img               
- <!--img  src="http://spring.dev/wp-content/uploads/2014/03/Spring_1_20141-118x150.jpeg" class="attachment-90x115 wp-post-image" alt="Spring_1_2014" style="max-width:115px;float:left;"-->
                 <h2>Aktuellt nummer</h2>
                 <span class="omslag-nummer" style="">Spring / Nr $number / $year </span>
-                <ul>    
+                <ul class="omslag-list">    
                   <li><i class="fa fa-caret-right"></i><a href="#">Se hela innehållet</a></li>
                   <li><i class="fa fa-caret-right"></i><a href="#">Prenumerera på Spring</a></li>
                   <li><i class="fa fa-caret-right"></i><a href="#">Läs tidningen digitalt som prenumerant</a></li>
                 </ul>    
 OUT;
- 
-                
+
+
       endwhile;
     endif;
     wp_reset_query();

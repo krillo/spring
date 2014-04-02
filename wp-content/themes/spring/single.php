@@ -23,8 +23,8 @@
   </div>
   <div class="col-sm-6 column">
     <div class="row clearfix">
-      <?php include('sidebar1_tmp.php'); ?>
-      <?php include('sidebar2_tmp.php'); ?>
+      <?php include('sidebar1.php'); ?>
+      <?php include('sidebar2.php'); ?>
     </div>
   </div>
 </div>

@@ -54,26 +54,11 @@
           <div class="col-sm-6 column " id="omslag-box">
             <div class="row clearfix">
               <div class="col-sm-12 column ">
-                <!--img  src="http://spring.dev/wp-content/uploads/2014/03/Spring_1_20141-118x150.jpeg" class="attachment-90x115 wp-post-image" alt="Spring_1_2014" style="max-width:115px;float:left;">
-                <h2>Aktuellt nummer</h2>
-                <span class="omslag-nummer" style="">Spring / Nr 1 / 2014 </span>
-                <ul>    
-                  <li><i class="fa fa-caret-right"></i><a href="#">Se hela innehållet</a></li>
-                  <li><i class="fa fa-caret-right"></i><a href="#">Prenumerera på Spring</a></li>
-                  <li><i class="fa fa-caret-right"></i><a href="#">Läs tidningen digitalt som prenumerant</a></li>
-                </ul-->    
                 <?php
                 global $omslag;
                 if (method_exists($omslag, 'printOmslag')) $omslag->printOmslag(); 
                 ?>
-                <!--img alt="" src="http://spring.dev/wp-content/themes/spring/tmp/top-right-pren-puff.png" /-->  
               </div>
             </div>
           </div>
         </div>
-
-
-
-
-
-

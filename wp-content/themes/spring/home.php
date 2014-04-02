@@ -1,9 +1,7 @@
 <?php
 /**
- * 
+ * Spring home page 
  * @author Kristain Erendi
- * @subpackage Template
- * 
  */
 get_header();
 ?>

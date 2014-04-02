@@ -23,13 +23,19 @@ div#headline-puff{height:75px;}
 
 body{color: #222;font-family: 'Open Sans', sans-serif;background-color: #f6f6f6;}
 body.home {background-image: none;}
-img, article img {background-color: transparent;border: none;padding: 4px;width:100%;}
+img, article img {background-color: transparent;border: none;padding: 0;width:100%;}
 .container {max-width: 1170px;padding: 0;}
 .row{margin-left: 0;margin-right: 0;}
 
 
 /*ads*/
 #ad1{margin-top: 30px;margin-bottom: 20px;}
+
+
+/*article*/
+article{border-bottom: 1px dotted #C0BEBE;margin-bottom: 15px;}
+.article-small img{width: auto;float:left;}
+.article-small img{width: auto;}
 
 /*pub-info*/
 .pub-info{color: #C0BEBE;padding-bottom: 30px;font-size: 13px;}
@@ -42,11 +48,14 @@ img, article img {background-color: transparent;border: none;padding: 4px;width:
 .read-more{color:#f59d00;}
 
 
+
+
+
 /*sidebar header*/
 .sidebar-header{
   background-image: url("img/bg_sidebar.png");
   background-repeat: repeat-y;
-  width: 100%;
+  background-size: 100%;
   font-size: 14px;
   color: #FFF;
   padding-left: 7px;
@@ -62,5 +71,6 @@ li.widget {list-style: none;margin-bottom: 25px;}
 
 /*omslag*/
 #omslag-box img{width:90px;float:left;margin-right: 10px;}
-#omslag-box h2{margin-top: 0;}
-#omslag-box ul{padding:0; list-style: none;}
+#omslag-box h2{margin-top: 0;margin-bottom: 0;}
+#omslag-box ul{padding:0; list-style: none;margin-top: 14px;}
+#omslag-box ul i {margin-right: 5px;}
