@@ -40,24 +40,33 @@
       }(document, 'script', 'facebook-jssdk'));
     </script>
 
+    <!--div class="container-fluid"-->
     <div class="container">
       <div class="row clearfix">
         <div class="col-sm-12 column" id="ad1">
           <img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/tmp/banner_930.png" />
         </div>
       </div>
-      <div class="row clearfix" id="spring-container">
-        <div class="col-sm-12 column">
-          <div class="col-sm-6 column" id="logo">
-            <img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" />
-          </div>
-          <div class="col-sm-6 column " id="omslag-box">
+      <div class="" id="spring-container">
+        <div class="row clearfix" >
+          <div class="col-sm-12 column" >
+          <div id="spring-header-container">
             <div class="row clearfix">
-              <div class="col-sm-12 column ">
-                <?php
-                global $omslag;
-                if (method_exists($omslag, 'printOmslag')) $omslag->printOmslag(); 
-                ?>
+              
+                <div class="col-sm-6 column" id="logo">
+                  <a href="<?php echo home_url('/'); ?>"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" /></a>
+                </div>
+                <div class="col-sm-6 column " id="omslag-box">
+                  <div class="row clearfix">
+                    <div class="col-sm-12 column ">
+                      <?php
+                      global $omslag;
+                      if (method_exists($omslag, 'printOmslag'))
+                        $omslag->printOmslag();
+                      ?>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

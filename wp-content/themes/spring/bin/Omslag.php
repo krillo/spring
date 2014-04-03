@@ -67,8 +67,8 @@ class Omslag {
       while ($loop->have_posts()) : $loop->the_post();
         $id = $post->ID;
         //$img = get_the_post_thumbnail($id, array(90,115));
-        $img = get_the_post_thumbnail($id, array(90, 'auto'));
-        //$img = get_the_post_thumbnail($id);
+        //$img = get_the_post_thumbnail($id, array(90, 'auto'));
+        $img = get_the_post_thumbnail($id);
         $number = get_field('nummer');
         $year = get_field('year');
         /*

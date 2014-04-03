@@ -23,10 +23,17 @@ div#headline-puff{height:75px;}
 
 body{color: #222;font-family: 'Open Sans', sans-serif;background-color: #f6f6f6;}
 body.home {background-image: none;}
-img, article img {background-color: transparent;border: none;padding: 0;width:100%;}
+img, article img {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  min-width: 100%;
+  max-width: inintial;
+}
+/*
 .container {max-width: 1170px;padding: 0;}
 .row{margin-left: 0;margin-right: 0;}
-
+*/
 
 /*ads*/
 #ad1{margin-top: 30px;margin-bottom: 20px;}
@@ -34,8 +41,8 @@ img, article img {background-color: transparent;border: none;padding: 0;width:10
 
 /*article*/
 article{border-bottom: 1px dotted #C0BEBE;margin-bottom: 15px;}
-.article-small img{width: auto;float:left;}
-.article-small img{width: auto;}
+/*.article-small img{float:left;width: auto; min-width: auto;}*/
+.article-small img, #omslag-box img{float:left;max-width: none; min-width: initial; width:auto;}
 
 /*pub-info*/
 .pub-info{color: #C0BEBE;padding-bottom: 30px;font-size: 13px;}
@@ -46,8 +53,6 @@ article{border-bottom: 1px dotted #C0BEBE;margin-bottom: 15px;}
 
 .article-cat, .article-cat a{font-weight: bold;color:#f59d00;}
 .read-more{color:#f59d00;}
-
-
 
 
 
@@ -74,3 +79,12 @@ li.widget {list-style: none;margin-bottom: 25px;}
 #omslag-box h2{margin-top: 0;margin-bottom: 0;}
 #omslag-box ul{padding:0; list-style: none;margin-top: 14px;}
 #omslag-box ul i {margin-right: 5px;}
+
+
+
+#spring-header-container{overflow:hidden;border-bottom:solid #BEBEBE 1px;margin:30px 0;}
+
+
+#spring-container{  border: solid #BEBEBE;border-width: 0 1px 1px;background: #FFF;box-shadow: 0 1px 5px 0 #c1c1c1;}
+
+#spring-container, #ad1{padding-left: 30px;padding-right: 30px}

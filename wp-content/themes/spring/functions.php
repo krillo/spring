@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Spring
  * Author: Kristian Erendi
@@ -13,54 +14,55 @@ include_once 'bin/Omslag.php';
 //include_once get_template_directory() . "/bin/ReptiloCarousel.php";
 //include_once get_template_directory() . "/bin/ReptiloFAQ.php";
 
-/*Henric*/
-add_theme_support( "pay_with_a_like_style" );
+/* Henric */
+add_theme_support("pay_with_a_like_style");
 
 
 /**
  * custom size for images
  */
-if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size('bokomslag', 45, 70, true);
+if (function_exists('add_image_size')) {
+  add_image_size('bokomslag', 45, 70, true);
 }
-
 
 function spring_widgets_init() {
   register_sidebar(array(
       'name' => __('Sidebar 1'),
       'id' => 'sidebar1',
-      'before_title' => '<div class="sidebar-header"><i class="fa fa-caret-right"></i> ',
-      'after_title' => '</div>'
+      'before_title' => '<div class="sidebar-header"><i class="fa fa-caret-right"></i>',
+      'after_title' => '</div>',
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+      'after_widget' => '</div>',
   ));
-    register_sidebar(array(
-        'name' => __('Sidebar 1.1'),
-        'id' => 'sidebar11',
-        'before_title' => '<div class="sidebar-header"><i class="fa fa-caret-right"></i> ',
-        'after_title' => '</div>'
-    ));
+  register_sidebar(array(
+      'name' => __('Sidebar 1.1'),
+      'id' => 'sidebar11',
+      'before_title' => '<div class="sidebar-header"><i class="fa fa-caret-right"></i> ',
+      'after_title' => '</div>',
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+      'after_widget' => '</div>',
+  ));
   register_sidebar(array(
       'name' => __('Sidebar 2'),
       'id' => 'sidebar2',
       'before_title' => '<div class="sidebar-header"><i class="fa fa-caret-right"></i> ',
-      'after_title' => '</div>'
+      'after_title' => '</div>',
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+      'after_widget' => '</div>',
   ));
 }
 
 add_action('widgets_init', 'spring_widgets_init');
 
-
-
-
-
 /**
  * Enqueues scripts and styles for frontend.
  */
 function spring_enqueue_scripts() {
-  wp_enqueue_style('style.henke', get_stylesheet_directory_uri() . '/css/style.henke.css', array('woodojo-social-widgets', 'fbSEOwpcomments', 'fbSEOStylesheet', 'style', 'font_awesome', 'thickbox'  ), '2014-03-26');
-  wp_enqueue_style('style.mashmenu', get_stylesheet_directory_uri() . '/css/style.mashmenu.css', array('woodojo-social-widgets', 'fbSEOwpcomments', 'fbSEOStylesheet', 'style', 'font_awesome', 'thickbox'  ), '2014-03-26');
+  wp_enqueue_style('style.henke', get_stylesheet_directory_uri() . '/css/style.henke.css', array('woodojo-social-widgets', 'fbSEOwpcomments', 'fbSEOStylesheet', 'style', 'font_awesome', 'thickbox'), '2014-04-03');
+  wp_enqueue_style('style.mashmenu', get_stylesheet_directory_uri() . '/css/style.mashmenu.css', array('woodojo-social-widgets', 'fbSEOwpcomments', 'fbSEOStylesheet', 'style', 'font_awesome', 'thickbox'), '2014-03-26');
 }
-add_action('wp_enqueue_scripts', 'spring_enqueue_scripts');
 
+add_action('wp_enqueue_scripts', 'spring_enqueue_scripts');
 
 /**
  * Display posts from:
@@ -83,17 +85,17 @@ function spring_printPostsPerPosttype($posttype = 'litteraturtips', $nbr = 1, $r
   if ($loop->have_posts()):
     $i = 0;
     while ($loop->have_posts()) : $loop->the_post();
-      if($i % 2 == 0){
-        $zebra_class = 'zebra'; 
+      if ($i % 2 == 0) {
+        $zebra_class = 'zebra';
       } else {
-        $zebra_class = ''; 
+        $zebra_class = '';
       }
-      $i++;  
+      $i++;
       $img = wp_get_attachment_image(get_field('bild'), 'bokomslag');
-      $title = mb_substr(get_the_title(), 0, 32). '..';
-      $author = mb_substr(get_field('forfattare'), 0, 32). '..';
+      $title = mb_substr(get_the_title(), 0, 32) . '..';
+      $author = mb_substr(get_field('forfattare'), 0, 32) . '..';
       $text = mb_substr(get_field('text'), 0, 32);
-      $text = $text == ''? $text : $text. '..';
+      $text = $text == '' ? $text : $text . '..';
       $url = get_field('isbn');  //notis its is now a link!!
       $readingbox .= <<<RB
         <div class="posttype-container $zebra_class">
@@ -133,8 +135,8 @@ function spring_printPostsPerCat($category = 'aktuellt', $nbr = 1, $offset = 0, 
       if ($i >= $offset) {
         $guid = get_permalink();
         if ($extraclass == 'cat-minimum') {  //small version
-          if(strlen(get_the_title()) > $nbrDigitsTitle){
-            $title = mb_substr(get_the_title(), 0, $nbrDigitsTitle).'...';
+          if (strlen(get_the_title()) > $nbrDigitsTitle) {
+            $title = mb_substr(get_the_title(), 0, $nbrDigitsTitle) . '...';
           } else {
             $title = get_the_title();
           }
@@ -178,9 +180,4 @@ RB;
   wp_reset_query();
   echo $readingbox;
 }
-
-
-
-
-
 

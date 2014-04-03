@@ -23,7 +23,8 @@ a:hover{text-decoration: none;color: #fcbe00;}
 a:visited{text-decoration: none;color:#f59d00;}
 .read-more a:hover{text-decoration: none;}
 
-#spring-container{  border: solid #BEBEBE;border-width: 0 1px 1px;background: #FFF;box-shadow: 0 1px 5px 0 #c1c1c1;}
+
+img, article img{border-radius: 0px;}
 
 
 /* 1. Pay With a Like */
@@ -124,3 +125,6 @@ li.tweet-number-1 {list-style-type: none;}
 .omslag-text ul{list-style: none;padding-left: 0px;}
 
 
+
+/*stop showin' anoying ads from WPMU*/
+#wpmu-install-dashboard{display:none;}

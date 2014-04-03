@@ -7,7 +7,7 @@
 */
 .mashmenu {position: fixed;top: 0;left: 0;width: 100%;z-index: 1000;box-shadow: 0 1px 5px 0px #858585;background:#fcbe00;}
 
-.mashmenu img.mlogo{display:inline-block !important; padding: 0px; width:200px;}
+.mashmenu img.mlogo{display: inline-block !important;padding: 12px;width: 137px;min-width: 0px;}
 .mashmenu div.mlogo{margin:0 20px 0 0}
 .mashmenu .logo a{display:inline-block}
 .mashmenu .logo a:hover{background:none}
@@ -24,13 +24,13 @@
 .mashmenu .mod:hover a{color:#fcbe00}
 .mashmenu .mod:hover .mod-content{display:block;}
 
-.mashmenu .menu{list-style:none;margin:0;padding:0;display:inline-block;vertical-align:top}
-.mashmenu .menu>li{display:inline;margin:0;position:initial}
+.mashmenu .menu{list-style:none;margin:0;padding:0;display:inline-block;vertical-align:top;}
+.mashmenu .menu>li{display:inline-block;margin:0;position:initial;border-left:1px solid white;}
 .mashmenu .menu>li>a{display:inline-block;padding:10px 10px;color:#FFF;font-family:'Open Sans', sans-serif;font-weight: bold; font-size:14px;text-transform:none;position:relative;line-height:2em;letter-spacing: 1px;}
-.mashmenu .menu .sub-content{display:none;width:100%;position:absolute;background:#FFFFFF;box-shadow: 0 1px 5px 0 #858585; border-bottom:3px solid #fcbe00;left:0;top:initial}
+.mashmenu .menu .sub-content{display:none;width:100%;position:absolute;background:#FFFFFF;border-bottom:3px solid #fcbe00;left:0;top:initial}
 .mashmenu .menu .sub-content.sub-content-active{display:block !important}
 .mashmenu .menu li.level0:hover>a{background:#FFFFFF;color:#fcbe00}
-.mashmenu .sub-channel{display:inline-block;width:200px;margin:0;padding:10px 0 0 0	;height:205px;vertical-align:top;background:#fcbe00}
+.mashmenu .sub-channel{display:inline-block;width:197px;margin:0;padding:10px 0 0 0	;height:205px;vertical-align:top;background:#fcbe00}
 .mashmenu .sub-channel li{display:block}
 .mashmenu .menu .sub-channel li a{color:#FFFFFF;font-weight:bold;text-align:right;display:block;padding:5px 10px;margin:5px 0;text-decoration:none}
 .mashmenu .menu li.level0:hover .sub-channel li a{background:none}
@@ -87,7 +87,7 @@
 .mashmenu .menu-mobile{color: #FFFFFF;font-size: 30px;line-height: 45px;vertical-align: top;display:none;cursor:pointer;float:right;margin:0 20px 0 0}
 
 /* Active state on mobile screen */
-.mashmenu .menu.active{display:block;position:absolute;top:initial;right:0;background:#DDF0F9;width:200px;border-bottom:3px solid #2AA4CF}
+.mashmenu .menu.active{display:block;position:absolute;top:initial;right:0;background:#fff;width:200px;border-bottom:3px solid #fcbe00}
 .mashmenu .menu.active li{display:block !important;width:100%;text-align:right;padding-right:20px}
 .mashmenu .menu.active li i{display:none}
 .mashmenu .menu.active > li > a{padding-right:20px;color:#333}

@@ -16,7 +16,8 @@ if (have_posts()):
         big();
         break;
       case 5:
-        ad();
+        big();
+        //ad();
         break;
       default:
         small();
@@ -34,7 +35,7 @@ function big() {
     <div class="col-sm-12">
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <a href="<?php the_permalink(); ?>" ><?php the_post_thumbnail('medium'); ?></a>
-        <a href="<?php the_permalink(); ?>" ><h1><?php the_title(); ?> 11</h1></a>
+        <a href="<?php the_permalink(); ?>" ><h1><?php the_title(); ?></h1></a>
         <p><span class="article-cat"><?php the_category(', '); ?></span>&nbsp;&nbsp;<?php echo get_the_excerpt(); ?>
           <a href="<?php the_permalink(); ?>" ><span class="read-more">Läs mer <i class="fa fa-angle-double-right"></i></span></a>
         </p>
@@ -51,7 +52,7 @@ function small() {
     <div class="col-sm-12">
       <article id="post-<?php the_ID(); ?>" <?php post_class('article-small'); ?>>
         <a href="<?php the_permalink(); ?>" ><?php the_post_thumbnail('thumbnail'); ?></a>
-        <a href="<?php the_permalink(); ?>" ><h1><?php the_title(); ?> 222</h1></a>
+        <a href="<?php the_permalink(); ?>" ><h1><?php the_title(); ?></h1></a>
         <p><span class="article-cat"><?php the_category(', '); ?></span>&nbsp;&nbsp;<?php echo get_the_excerpt(); ?>
           <a href="<?php the_permalink(); ?>" ><span class="read-more">Läs mer <i class="fa fa-angle-double-right"></i></span></a>
         </p>
