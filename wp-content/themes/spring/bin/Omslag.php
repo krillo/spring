@@ -71,24 +71,6 @@ class Omslag {
         $img = get_the_post_thumbnail($id);
         $number = get_field('nummer');
         $year = get_field('year');
-        /*
-          $out .= <<<OUT
-          <div class="omslag">
-          $img
-          </div>
-          <div class="omslag-text">
-          <h2>Aktuellt nummer</h2>
-          <div class="omslag-nummer">Spring / Nr $number / $year </div>
-          <ul>
-          <li><i class="fa fa-caret-right"></i><a href="#">Se hela innehållet</a></li>
-          <li><i class="fa fa-caret-right"></i><a href="#">Prenumerera på Spring</a></li>
-          <li><i class="fa fa-caret-right"></i><a href="#">Läs tidningen digitalt som prenumerant</a></li>
-          </ul>
-          </div>
-          OUT;
-         */
-
-
         $out .= <<<OUT
                 $img               
                 <h2>Aktuellt nummer</h2>

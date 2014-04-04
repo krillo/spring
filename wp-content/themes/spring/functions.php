@@ -47,7 +47,19 @@ function spring_widgets_init() {
       'id' => 'sidebar2',
       'before_title' => '<div class="sidebar-header"><i class="fa fa-caret-right"></i> ',
       'after_title' => '</div>',
+      'before_widget' => '<div id="%1$s" class="widget %2$s spring-widget">',
+      'after_widget' => '</div>',
+  ));
+  register_sidebar(array(
+      'name' => __('Annons-banner'),
+      'id' => 'banner',
       'before_widget' => '<div id="%1$s" class="widget %2$s">',
+      'after_widget' => '</div>',
+  ));
+  register_sidebar(array(
+      'name' => __('Annons flöde'),
+      'id' => 'ad-loop',
+      'before_widget' => '<div class="ad-tag"></div><div id="%1$s" class="widget %2$s adrotate-loop">',
       'after_widget' => '</div>',
   ));
 }
@@ -181,3 +193,19 @@ RB;
   echo $readingbox;
 }
 
+function reptiloGetCategorys() {
+  /*
+  //use this instead to get a linked list
+  $catlist = the_category(',');
+  //echo $catlist;
+  $catarray = explode(',',$catlist);
+  print_r($catarray);
+  */
+  $categorys = get_the_category();
+  //print_r($categorys); 
+  $category = $categorys[0]->cat_name;
+  if (count($categorys) > 1) {
+    $category .= ', ' . $categorys[1]->cat_name;
+  }
+  return $category; 
+}

@@ -27,9 +27,7 @@
       
       //alert(windowsize +' , '+ fbWidth);
       //$('.fb-like-box').prop('data-width', fbWidth + 'px');
-      
       $('#facebook-tab').html('<div class="fb-like-box" data-href="https://www.facebook.com/magasinspring" data-width="'+ fbWidth +'px" data-height="540" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="true"></div>');
-      
     }
 
     // Execute on load
@@ -67,4 +65,5 @@
     </div>
   </div>
 </div>
+<div class="clearfix"></div>
 <!-- /tabs --> 

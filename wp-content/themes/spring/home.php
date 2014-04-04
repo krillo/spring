@@ -6,11 +6,11 @@
 get_header();
 ?>
 <div class="row clearfix" >
-  <div class="col-sm-6 column">
+  <div class="col-md-6 column">
     <?php include 'snippets/mainloop.php'; ?>
   </div>       
 
-  <div class="col-sm-6 column">
+  <div class="col-md-6 column">
     <div class="row clearfix">
       
 

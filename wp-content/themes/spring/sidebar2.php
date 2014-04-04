@@ -4,6 +4,6 @@
  * and open the template in the editor.
  */
 ?>
-<div class="col-sm-6 column" id="sidebar2">
+<div class="col-md-6 column" id="sidebar2">
   <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("sidebar2")) : endif; ?>    
 </div>

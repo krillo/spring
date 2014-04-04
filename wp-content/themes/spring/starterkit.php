@@ -85,10 +85,10 @@ var GoogleCalendarEvents = {"ajaxurl":"http:\/\/spring.dev\/wp-admin\/admin-ajax
     </div>
     <div class="col-md-6 column">
       <div class="row clearfix">
-        <div class="col-sm-6 column" id="sidebar1">
+        <div class="col-md-6 column" id="sidebar1">
           <img alt="" src="http://spring.dev/wp-content/themes/spring/tmp/Column-center.png" />  
         </div>
-        <div class="col-sm-6 column" id="sidebar2">
+        <div class="col-md-6 column" id="sidebar2">
           <img alt="" src="http://spring.dev/wp-content/themes/spring/tmp/Column-right.png" />  
         </div>      
       </div>
@@ -99,16 +99,16 @@ var GoogleCalendarEvents = {"ajaxurl":"http:\/\/spring.dev\/wp-admin\/admin-ajax
     
     
 	<footer class="row clearfix">
-		<div class="col-sm-3 column">
+		<div class="col-md-3 column">
 			 <address> <strong>Twitter, Inc.</strong><br /> 795 Folsom Ave, Suite 600<br /> San Francisco, CA 94107<br /> <abbr title="Phone">P:</abbr> (123) 456-7890</address>
 		</div>
-		<div class="col-sm-3 column">
+		<div class="col-md-3 column">
 			 <address> <strong>Twitter, Inc.</strong><br /> 795 Folsom Ave, Suite 600<br /> San Francisco, CA 94107<br /> <abbr title="Phone">P:</abbr> (123) 456-7890</address>
 		</div>
-		<div class="col-sm-3 column">
+		<div class="col-md-3 column">
 			 <address> <strong>Twitter, Inc.</strong><br /> 795 Folsom Ave, Suite 600<br /> San Francisco, CA 94107<br /> <abbr title="Phone">P:</abbr> (123) 456-7890</address>
 		</div>
-		<div class="col-sm-3 column">
+		<div class="col-md-3 column">
 			 <address> <strong>Twitter, Inc.</strong><br /> 795 Folsom Ave, Suite 600<br /> San Francisco, CA 94107<br /> <abbr title="Phone">P:</abbr> (123) 456-7890</address>
 		</div>
 	</footer>

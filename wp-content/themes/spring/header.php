@@ -43,22 +43,22 @@
     <!--div class="container-fluid"-->
     <div class="container">
       <div class="row clearfix">
-        <div class="col-sm-12 column" id="ad1">
-          <img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/tmp/banner_930.png" />
+        <div class="col-md-12 column" id="ad1">
+          <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("banner")) : endif; ?>
         </div>
       </div>
       <div class="" id="spring-container">
         <div class="row clearfix" >
-          <div class="col-sm-12 column" >
+          <div class="col-md-12 column" >
           <div id="spring-header-container">
             <div class="row clearfix">
               
-                <div class="col-sm-6 column" id="logo">
+                <div class="col-md-6 column" id="logo">
                   <a href="<?php echo home_url('/'); ?>"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" /></a>
                 </div>
-                <div class="col-sm-6 column " id="omslag-box">
+                <div class="col-md-6 column " id="omslag-box">
                   <div class="row clearfix">
-                    <div class="col-sm-12 column ">
+                    <div class="col-md-12 column ">
                       <?php
                       global $omslag;
                       if (method_exists($omslag, 'printOmslag'))
