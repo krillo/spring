@@ -21,7 +21,8 @@ if (have_posts()):
         big();
         break;
       case 3:
-        specialCat();
+        //specialCat();
+        small();
         break;
       case 4:
         big();
