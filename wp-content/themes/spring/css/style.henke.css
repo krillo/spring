@@ -12,6 +12,9 @@ Author URI: http://www.oresundswebb.se/  http://reptilo.se
 	3.1 Tab
 	3.2 Twitter
 4. Instagram
+5. Menu
+6. Pren. puff
+7. Simple Share Buttons Adder
 
 */
 
@@ -78,7 +81,7 @@ For correct display, you may need to change other css properties too*/
 .gce-list-event-google {margin-top: 5px;}
 
 ul.gce-list {padding-left:0px;}
-li.gce-feed-2 {list-style-type: none;}
+li.gce-feed-2 {list-style-type: none;list-style-type: none;margin-bottom: 15px;border-bottom: 1px dotted #C0BEBE;padding-bottom: 15px;}
 .gce-page-list .gce-list div span {color: #222222; font-weight: bold;}
 .gce-page-list .gce-list .gce-list-event {background-color: #ffffff;}
 
@@ -124,6 +127,8 @@ li.tweet-number-1 {list-style-type: none;}
 .omslag-nummer {padding-bottom: 22px; font-weight: bold; font-size: 14px; color: #444444;}
 .omslag-text ul{list-style: none;padding-left: 0px;}
 
+.spring-form-sidebar{width: 100%;}
+.spring-form-sidebar-button{float: right;margin-top:5px;}
 
 
 /*stop showin' anoying ads from WPMU*/

@@ -5,5 +5,8 @@
  */
 ?>
 <div class="col-md-6 column" id="sidebar2">
-  <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("sidebar2")) : endif; ?>    
+  <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("sidebar2")) : endif; ?>  
+  
+  <div class="sidebar-header"><i class="fa fa-caret-right"></i> Boktips</div>
+  <?php global $littTips; if (method_exists($littTips,'printLitteraturtips')) $littTips->printLitteraturtips(); ?>
 </div>

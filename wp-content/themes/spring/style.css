@@ -104,3 +104,11 @@ width: 49px;
 .adrotate-loop{padding-bottom: 15px;margin-bottom: 15px;border-bottom: 1px dotted #C0BEBE;}
 
 .spring-widget{margin-bottom: 15px;}
+
+
+/*litteraturtips*/
+.posttype-container{background-color: #fafafa;border: #e6e6e6 solid 1px;padding:5px;overflow:hidden; font-size: 11px;}
+.posttype-img{float:left;overflow:hidden;margin-right: 5px;}
+.posttype-container img{padding: 0;  -moz-border-radius: 0;-webkit-border-radius: 0;-khtml-border-radius: 0;border-radius: 0;}
+.posttype-content{float:left;}
+.zebra{background-color: #f0f0f0;}

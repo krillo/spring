@@ -10,6 +10,7 @@
               <span class="article-cat"><?php $showCat = true; include('snippets/pubinfo.php'); ?></span>
               <?php the_post_thumbnail('medium'); ?>
               <?php the_content(); ?>
+              <?php comments_template(); ?>
             </article>
           </div>  
         </div>  

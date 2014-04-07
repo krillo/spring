@@ -3,6 +3,14 @@
  * This is the main loop
  * 
  */
+$args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 5,
+    'cat' => -14,
+    'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
+);
+
+query_posts($args);
 $i = 0;
 if (have_posts()):
   while (have_posts()):
@@ -11,6 +19,9 @@ if (have_posts()):
     switch ($i) {
       case 1:
         big();
+        break;
+      case 3:
+        specialCat();
         break;
       case 4:
         big();
@@ -28,12 +39,38 @@ if (have_posts()):
   }
 endif;
 
+function specialCat() {
+
+
+  $args = array('posts_per_page' => 1, 'category' => 14);
+  $specPosts = get_posts($args);
+  //print_r($specPosts);
+  foreach ($specPosts as $specPost) : setup_postdata($specPost);
+print_r($specPost);
+    //the_post();
+    the_title();
+    echo $specPost->post_title;
+    small();
+  endforeach;
+  wp_reset_postdata();
+
+  /*
+    if (have_posts()):
+    while (have_posts()):
+    small();
+    endwhile;
+    endif;
+    wp_reset_query();
+   * 
+   */
+}
+
 function big() {
-    $categorys = get_the_category(); 
-    $category = $categorys[0]->cat_name;
-    if(count($categorys) > 1){
-      $category .= ', '.$categorys[1]->cat_name;
-    }
+  $categorys = get_the_category();
+  $category = $categorys[0]->cat_name;
+  if (count($categorys) > 1) {
+    $category .= ', ' . $categorys[1]->cat_name;
+  }
   ?>
   <div class="row">
     <div class="col-md-12" id="article-feed">
@@ -51,8 +88,9 @@ function big() {
 }
 
 function small() {
-  $category = get_the_category(); 
+  $category = get_the_category();
   $first_category = $category[0]->cat_name;
+    echo 'krillo';
   ?>
   <div class="row">
     <div class="col-md-12">
@@ -73,7 +111,7 @@ function ad() {
   ?>
   <div class="row">
     <div class="col-md-12">
-        <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("ad-loop")) : endif; ?>
+      <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("ad-loop")) : endif; ?>
     </div>  
   </div>  
   <?php
