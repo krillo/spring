@@ -11,18 +11,25 @@ Template: reptilo
 
 
 @media (max-width: 768px) {
-#logo {display: none;}
-#omslag-box {display: none;}
-#spring-header-container{display: none;}
-#article-feed {margin-top: 10px;}
+  #logo {display: none;}
+  #omslag-box {display: none;}
+  #spring-header-container{display: none;}
+  #article-feed {margin-top: 10px;}
 
 }
 
-@media (min-width: 484px) and (max-width: 991px) {
-
-
+@media (min-width: 768px) and (max-width: 991px) {
+  #logo {display: none;}
+  #logo-colapsed{display: block;}
+  .omslag-list a{font-size: 13px;}
 }
 
+@media (min-width: 991px){
+  #logo-colapsed{display: none;}
+}
+
+#logo-colapsed{width:280px;float:left;margin-right: 15px;}
+#logo-colapsed a img{width: 100%;padding-top: 25px;}
 
 body{color: #222;font-family: 'Open Sans', sans-serif;background-color: #f6f6f6;}
 body.home {background-image: none;}
@@ -94,12 +101,12 @@ li.widget {list-style: none;margin-bottom: 25px;}
 
 /*ads*/
 .ad-tag {
-background: url('img/annons.png') no-repeat;
-display: block;
-height: 11px;
-text-indent: -999999px;
-white-space: nowrap;
-width: 49px;
+  background: url('img/annons.png') no-repeat;
+  display: block;
+  height: 11px;
+  text-indent: -999999px;
+  white-space: nowrap;
+  width: 49px;
 }
 .adrotate-loop{padding-bottom: 15px;margin-bottom: 15px;border-bottom: 1px dotted #C0BEBE;}
 

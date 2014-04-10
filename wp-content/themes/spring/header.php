@@ -50,15 +50,18 @@
       <div class="" id="spring-container">
         <div class="row clearfix" >
           <div class="col-md-12 column" >
-          <div id="spring-header-container">
-            <div class="row clearfix">
-              
+            <div id="spring-header-container">
+              <div class="row clearfix">
+
                 <div class="col-md-6 column" id="logo">
                   <a href="<?php echo home_url('/'); ?>"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-tagline2.png" /></a>
                 </div>
                 <div class="col-md-6 column " id="omslag-box">
                   <div class="row clearfix">
                     <div class="col-md-12 column ">
+                      <div class="" id="logo-colapsed">
+                        <a href="<?php echo home_url('/'); ?>"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-tagline2.png" /></a>
+                      </div>
                       <?php
                       global $omslag;
                       if (method_exists($omslag, 'printOmslag'))
