@@ -114,7 +114,7 @@ width: 49px;
 .zebra{background-color: #f0f0f0;}
 
 /*blogg-puff*/
-.blogg-puff {border-bottom: 1px dotted #C0BEBE;padding-bottom: 5px;}
+.blogg-puff {border-bottom: 1px dotted #C0BEBE;padding-bottom: 10px;min-height: 81px}
 .blogg-puff img{width:70px;height:70px;float:right;min-width: default;margin-left: 10px;}
 .blogg-puff h3{font-size: 13px; margin-bottom: 5px;margin-top: 9px;}
 .blogg-puff p{font-size: 12px;line-height: 14px; margin-bottom: 2px;}
