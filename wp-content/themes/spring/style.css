@@ -30,7 +30,7 @@ img, article img {
   background-color: transparent;
   border: none;
   padding: 0;
-  min-width: 100%;
+  /*min-width: 100%; */
   max-width: inintial;
 }
 
@@ -112,3 +112,12 @@ width: 49px;
 .posttype-container img{padding: 0;  -moz-border-radius: 0;-webkit-border-radius: 0;-khtml-border-radius: 0;border-radius: 0;}
 .posttype-content{float:left;}
 .zebra{background-color: #f0f0f0;}
+
+/*blogg-puff*/
+.blogg-puff {border-bottom: 1px dotted #C0BEBE;padding-bottom: 5px;}
+.blogg-puff img{width:70px;height:70px;float:right;min-width: default;margin-left: 10px;}
+.blogg-puff h3{font-size: 14px}
+.blogg-puff p{font-size: 12px;line-height: 14px;}
+.blogg-puff a{font-size: 12px;line-height: 14px;}
+
+.devider-space{margin-bottom: 20px;}

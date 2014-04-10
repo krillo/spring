@@ -1,0 +1,160 @@
+msgid ""
+msgstr ""
+"Generated: SL Framework (http://www.sedlex.fr)\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-03-06T12:54:54+00:00\n"
+"Last-Translator: sehrama.ir <sehrama.ir>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Language: Farsi\n"
+"X-Poedit-Country: Iran\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes\n"
+
+msgid "This plugin enables scheduled backup of important part of your website : simple to use and efficient !"
+msgstr "این پلاگین پشتیبان گیری زمان بندی شده را که بخش مهمی برای وب سایت شماست فعال می کند: استفاده آسان و بهینه"
+
+msgid "Sorry, but you should install/activate %s on your website. Otherwise, this plugin will not work properly!"
+msgstr "متاسفانه، شما باید پلاگین را در وب سایت خود نصب و یا فعال  %s کنید، احتمال دارد پلاگین به‌ خوبی کار نکند"
+
+msgid "How often do you want to backup your website?"
+msgstr "شما چگونه می‌خواهید از وب سایت خود پشتیبان‌گیری کنید؟"
+
+msgid "Frequency (in days):"
+msgstr "تقریباً در روزهای"
+
+msgid "Time of the backups:"
+msgstr "زمان پشتیبان‌گیری"
+
+msgid "Please note that 0 means midnight, 1 means 1am, 13 means 1pm, etc. The backup will occur at that time (server time) so make sure that your website is not too overloaded at that time."
+msgstr "اگر 0 باشد به معنی در ساعت 0. اگر 1 به معنی ساعت 1 و اگر 13 به معنی ساعت 1 بعد از ظهر است. پشتیبان گیری بسته به زمان سرور شما در زمان انتخاب شده انجام خواهد شد"
+
+msgid "All SQL databases:"
+msgstr "همه‌ی پایگاه‌های داده SQL"
+
+msgid "Only your SQL database:"
+msgstr "فقط پایگاه داده‌ی SQL"
+
+msgid "The maximum file size (in MB):"
+msgstr "حداکثر سایز فایل (به مگابایت)"
+
+msgid "Do you want that the backup is sent by email?"
+msgstr "آیا می‌خواهید فایل پشتیبان از طریق ایمیل ارسال شود؟"
+
+msgid "Send the backup files by email:"
+msgstr "ارسال فایل‌های پشتیبان به ایمیل"
+
+msgid "You do not need to fill this field if no mail is to be sent."
+msgstr "اگر ایمیلی برای ارسال وجود ندارد، شما نیازی به پر کردن این فیلد ندارید."
+
+msgid "Save the backup files on a FTP?"
+msgstr "آیا فایل پشتیبان روی اف‌تی‌پی ذخیره شود؟"
+
+msgid "FTP host:"
+msgstr "هاست اف‌تی‌پی:"
+
+msgid "FTP port:"
+msgstr "پورت اف‌تی‌پی"
+
+msgid "Your FTP login:"
+msgstr "کاربری اف‌تی‌پی شما"
+
+msgid "Your FTP pass:"
+msgstr "رمز اف‌تی‌پی شما"
+
+msgid "Test"
+msgstr "آزمایش"
+
+msgid "How to restore the backup files?"
+msgstr "چگونه فایل‌های پشتیبان را فراخوانی کنیم؟"
+
+msgid "Backups"
+msgstr "بک‌آپ‌ها"
+
+msgid "Manage translations"
+msgstr "مدیریت ترجمه"
+
+msgid "Give feedback"
+msgstr "ارسال بازخورد"
+
+msgid "Other plugins"
+msgstr "سایر افزونه‌ها"
+
+msgid "Date of the backup"
+msgstr "تاریخ پشتیبان‌گیری"
+
+msgid "Backup files"
+msgstr "فایل‌های پشتیبان"
+
+msgid "Everything OK!"
+msgstr "همه‌چی آرومه! من چقدر خوش‌بختم!"
+
+msgid "Keep the backup files for (in days):"
+msgstr "نگه‌داری فایل‌های پشتیبان به مدت (روز)"
+
+msgid "If you want to be notify when the backup process is finished, please enter your email:"
+msgstr "اگر می‌خواهید به محض اتمام عملیات پشتیبان‌گیری مطلع شوید، ایمیل‌تان را وارد کنید."
+
+msgid "Customize the name of the files?"
+msgstr "شخصی‌سازی نام فایل‌ها"
+
+msgid "Add this string to the name of the files:"
+msgstr "افزودن این رشته به نام فایل‌ها"
+
+msgid "The name of the files will be %s."
+msgstr "نام فایل‌ها %s خواهد بود."
+
+msgid "What do you want to save?"
+msgstr "گزینه‌های ذخیره‌سازی فایل پشتیبان را انتخاب کنید:"
+
+msgid "All directories (the full Wordpress installation):"
+msgstr "همه‌ی دایرکتوری‌ها (نصب و راه‌اندازی کامل وردپرس)"
+
+msgid "Check this option if you want to save everything. Be careful, because the backup could be quite huge!"
+msgstr "اگر می‌خواهید همه را ذخیره کنید، این گزینه باید انتخاب شود. احتیاط کنید، چون ممکن است حجم نسخه‌ی پشتیبان زیاد شود."
+
+msgid "The plugins directory:"
+msgstr "دایرکتوری افزونه‌ها"
+
+msgid "The themes directory:"
+msgstr "دایرکتوری قالب‌ها"
+
+msgid "The upload directory for this blog:"
+msgstr "دایرکتوری آپلود برای این وبلاگ"
+
+msgid "All upload directories (for this site and the sub-blogs):"
+msgstr "همه‌ی شاخه‌های آپلود (برای این سایت و زیر دامنه‌ها)"
+
+msgid "(FTP sending)"
+msgstr "(در حال ارسال اف‌تی‌پی)"
+
+msgid "(FTP sending - ending)"
+msgstr "(اتمام - ارسال اف‌تی‌پی)"
+
+msgid "Dear sirs,"
+msgstr "آقایان محترم"
+
+msgid "Best regards,"
+msgstr "بهترین ارزوها"
+
+msgid "The folder %s does not seems to be writable"
+msgstr "به نظر می‌رسد پوشه‌ی %s قابل نگارش نباشد"
+
+msgid "Please also note that the backup won't be end exactly at that time. The backup process could take up to 6h especially if you do not have a lot of traffic on your website and/or if the backup is quite huge."
+msgstr "همچنان توجه داشته باشید که پشتیبان‌گیری دقیقاً در این زمان به اتمام نمی‌رسد. فایند پشتیبان‌گیری ممکن است بیش از 6 ساعت هم طول بکشد. به ویژه اگر شما ترافیک زیادی روی وب‌سایتتان داشته باشید و یا حجم فایل پشتیبان‌تان زیاد باشد."
+
+msgid "Check this option if you want to save all plugins that you have installed and that you use on this website."
+msgstr "اگر می‌خواهید همه‌ی افزونه‌هایی را که روی وب‌سایت‌تان نصب کرده‌اید و استفاده می‌کنید، ذخیره شوند، این گزینه را انتخاب کنید."
+
+msgid "Check this option if you want to save all themes that you have installed and that you use on this website."
+msgstr "اگر می‌خواهید همه‌ی قالب‌هایی را که روی وب‌سایت‌تان نصب کرده‌اید و استفاده می‌کنید، ذخیره شوند، این گزینه را انتخاب کنید."
+

@@ -210,3 +210,22 @@ function reptiloGetCategorys() {
   }
   return $category; 
 }
+
+
+
+add_action( 'admin_init', 'my_remove_menu_pages' );
+ 
+function my_remove_menu_pages() {
+	// If the user does not have access to publish posts
+	if(!current_user_can('delete_plugins')) {
+		// Remove the "SEO" menu
+		remove_menu_page('tools.php');
+    remove_menu_page('admin.php?page=wpcf7');
+    remove_menu_page('edit.php?post_type=prenpuff');
+    remove_menu_page('edit.php?post_type=omslag');
+    remove_menu_page('edit.php?post_type=litteraturtips');
+    remove_menu_page('admin.php?page=wpseo_bulk-title-editor');
+	}
+}
+
+//admin.php?page=wpseo_dashboard

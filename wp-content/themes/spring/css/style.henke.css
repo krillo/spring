@@ -89,7 +89,7 @@ li.gce-feed-2 {list-style-type: none;list-style-type: none;margin-bottom: 15px;b
 .description {margin-top: 10px;}
 
 /* 3. Social Media Module */
-#social-tab{margin-top: 10px;} 
+#social-tab{margin-bottom: 15px;} 
 
 /* 3.1 Tab */
 .nav-tabs {border-bottom: 1px solid #ddd;margin-bottom: 10px;}
