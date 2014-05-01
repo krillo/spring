@@ -136,8 +136,12 @@ li.widget {list-style: none;margin-bottom: 25px;}
 
 .devider-space{margin-bottom: 20px;}
 
-
 /*footer*/
 #footer-logo img{float:left;}
 #footer-img img{float:right;margin-top: -40px;}
 
+
+
+/*HenkeStyle*/
+/*MashMenu*/
+.mashmenu .sub-channel{min-height:225px;}

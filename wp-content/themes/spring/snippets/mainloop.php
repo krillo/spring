@@ -40,10 +40,13 @@ endif;
 
 function big() {
   $categorys = get_the_category();
+  //print_r($categorys);
   $category = $categorys[0]->cat_name;
   if (count($categorys) > 1) {
     $category .= ', ' . $categorys[1]->cat_name;
   }
+  
+  //the_category();
   ?>
   <div class="row">
     <div class="col-md-12" id="article-feed">
