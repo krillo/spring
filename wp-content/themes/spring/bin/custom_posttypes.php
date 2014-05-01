@@ -7,7 +7,7 @@
 
 /**
  * Custom post type - Uppdragstagare
- */
+ * /
 function create_prenpuff() {
   $labels = array(
       'name' => 'Prenpuff',
@@ -44,7 +44,7 @@ function create_prenpuff() {
 
 add_action('init', 'create_prenpuff');
 
-
+*/
 
 
 /**

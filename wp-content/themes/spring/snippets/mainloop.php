@@ -20,15 +20,12 @@ if (have_posts()):
       case 1:
         big();
         break;
-      case 3:
-        //specialCat();
-        small();
-        break;
       case 4:
         big();
         break;
       case 5:
-        ad(); //notice the ad function calls big(); after showing ad, not to spoil the loop
+        ad();
+        small();
         break;
       default:
         small();
@@ -40,31 +37,6 @@ if (have_posts()):
   }
 endif;
 
-function specialCat() {
-
-
-  $args = array('posts_per_page' => 1, 'category' => 14);
-  $specPosts = get_posts($args);
-  //print_r($specPosts);
-  foreach ($specPosts as $specPost) : setup_postdata($specPost);
-print_r($specPost);
-    //the_post();
-    the_title();
-    echo $specPost->post_title;
-    small();
-  endforeach;
-  wp_reset_postdata();
-
-  /*
-    if (have_posts()):
-    while (have_posts()):
-    small();
-    endwhile;
-    endif;
-    wp_reset_query();
-   * 
-   */
-}
 
 function big() {
   $categorys = get_the_category();
@@ -91,7 +63,6 @@ function big() {
 function small() {
   $category = get_the_category();
   $first_category = $category[0]->cat_name;
-    echo 'krillo';
   ?>
   <div class="row">
     <div class="col-md-12">
@@ -116,5 +87,4 @@ function ad() {
     </div>  
   </div>  
   <?php
-  small();
 }

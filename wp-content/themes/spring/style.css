@@ -127,6 +127,13 @@ li.widget {list-style: none;margin-bottom: 25px;}
 .blogg-puff p{font-size: 12px;line-height: 14px; margin-bottom: 2px;}
 .blogg-puff a{font-size: 12px;line-height: 14px;}
 
+/*cat-puff*/
+.cat-puff {border-bottom: 1px dotted #C0BEBE;padding-bottom: 10px;min-height: 81px}
+.cat-puff img{width:70px;height:70px;float:right;min-width: default;margin-left: 10px;}
+.cat-puff h3{font-size: 13px; margin-bottom: 5px;margin-top: 9px;}
+.cat-puff p{font-size: 12px;line-height: 14px; margin-bottom: 2px;}
+.cat-puff a{font-size: 12px;line-height: 14px;}
+
 .devider-space{margin-bottom: 20px;}
 
 

@@ -60,16 +60,13 @@ class Prenpuff {
     register_post_type('prenpuff', $args);
   }
 
-  function printPrenpuff($posttype = 'prenpuff', $nbr = 1, $random = false, $nbrDigits = 40) {
+  function printPrenpuff($posttype = 'prenpuff', $nbr = 1) {
     global $post;
     $args = array('post_type' => $posttype, 'posts_per_page' => $nbr);
-    if ($random) {
-      $args['orderby'] = 'rand';
-    }
-    $loop = new WP_Query($args);
-    if ($loop->have_posts()):
-      while ($loop->have_posts()) : $loop->the_post();
-        $img = get_the_post_thumbnail(array('auto','auto'));
+    $prenloop = new WP_Query($args);
+    if ($prenloop->have_posts()):
+      while ($prenloop->have_posts()) : $prenloop->the_post();
+        $img = get_the_post_thumbnail();
         $out .= <<<OUT
         <div class="prenpuff">
               $img
@@ -78,6 +75,7 @@ OUT;
       endwhile;
     endif;
     wp_reset_query();
+    $out .= '<div class="devider-space"></div>';
     echo $out;
   }
 
