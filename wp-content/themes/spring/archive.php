@@ -8,7 +8,7 @@
             <article id="post-<?php the_ID(); ?>" class="col-md-12">
               <header>
                 <h2><?php the_title(); ?></h2>
-                <div class="pub-info"><i class="fa fa-calendar"></i><time pubdate="pubdate"><?php the_modified_date(); ?></time> | <?php the_category(', '); ?></div>
+                <span class="article-cat"><?php $showCat = true; include('snippets/pubinfo.php'); ?></span>
               </header>
               <div class="archive-content"><?php the_excerpt(); ?>
                 <a href="<?php echo get_permalink(); ?>"> Läs mer &raquo;</a>
