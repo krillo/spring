@@ -7,7 +7,6 @@
           <div class="col-md-12">
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
               <h1><?php the_title(); ?></h1>
-              <p><span class="article-cat"><?php the_category(', '); ?><?php $showCat = true; include('snippets/pubinfo.php'); ?></span> </p>
               <?php the_post_thumbnail('medium'); ?>
               <?php the_content(); ?>
             </article>
@@ -17,8 +16,6 @@
       endwhile;
     endif;
     ?>
-
-    <?php include 'snippets/mainloop.php'; ?>    
 
   </div>
   <div class="col-md-6 column">

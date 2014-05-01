@@ -15,3 +15,8 @@ sitemap.xml.gz
 .dropbox
 .idea/
 wp-content/sedlex/*
+wp-content/plugins/debug-bar/
+wp-content/plugins/debug-my-plugin/
+wp-content/plugins/debug-this/
+wp-content/plugins/fg-joomla-to-wordpress/
+wp-content/plugins/what-template-file-am-i-viewing
