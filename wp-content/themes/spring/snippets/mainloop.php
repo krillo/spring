@@ -37,14 +37,6 @@ if (have_posts()):
   }
 endif;
 
-function getOneCategory(){
-  $categorys = get_the_category_list( ', ');
-  $i = strpos($categorys, ', ');
-  if($i > 0 ){
-    $categorys = substr($categorys, 0, $i);
-  }
-  return $categorys;
-}
 
 
 function big() {
@@ -55,7 +47,7 @@ function big() {
         <a href="<?php the_permalink(); ?>" ><?php the_post_thumbnail('medium'); ?></a>
         <a href="<?php the_permalink(); ?>" ><h1 class="h1-big"><?php the_title(); ?></h1></a>
         <span class="article-cat"><?php $showCat = false; include('pubinfo.php'); ?></span>
-        <p><span class="article-cat"><?php echo getOneCategory(); ?></span>&nbsp;&nbsp;<?php echo get_the_excerpt(); ?>
+        <p><span class="article-cat"><?php echo rep_GetOneCategory(); ?></span>&nbsp;&nbsp;<?php echo get_the_excerpt(); ?>
           <a href="<?php the_permalink(); ?>" ><span class="read-more">Läs mer <i class="fa fa-angle-double-right"></i></span></a>
         </p>
       </article>
@@ -73,7 +65,7 @@ function small() {
         <a href="<?php the_permalink(); ?>" ><?php the_post_thumbnail('thumbnail'); ?></a>
         <a href="<?php the_permalink(); ?>" ><h1><?php the_title(); ?></h1></a>
         <span class="article-cat"><?php $showCat = false; include('pubinfo.php'); ?></span>
-        <p><span class="article-cat"><?php echo getOneCategory(); ?></span>&nbsp;&nbsp;<?php echo $excerpt; ?>
+        <p><span class="article-cat"><?php echo rep_GetOneCategory(); ?></span>&nbsp;&nbsp;<?php echo $excerpt; ?>
           <a href="<?php the_permalink(); ?>" ><span class="read-more">Läs mer <i class="fa fa-angle-double-right"></i></span></a>
         </p>
       </article>

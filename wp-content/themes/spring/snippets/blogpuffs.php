@@ -13,6 +13,7 @@ foreach ($blogusers as $user) {
   if ($recent) {
     $blogpuff = new stdClass;
     $blogpuff->user_id = $user->ID;
+    $blogpuff->author_link = get_author_posts_url($user->ID);
     $blogpuff->name = $user->display_name;
     $blogpuff->post_date = $recent[0]->post_date;
     $blogpuff->permalink = get_permalink($recent[0]->ID);
@@ -25,9 +26,9 @@ krsort($latestblogs);
 foreach ($latestblogs as $blogpuffx) :
   ?>
   <div class="blogg-puff">
-    <img src="<?php echo $blogpuffx->img; ?>" class="img-circle" />
+    <a href="<?php echo $blogpuffx->author_link; ?>"><img src="<?php echo $blogpuffx->img; ?>" class="img-circle" /></a>
     
-    <h3><?php echo $blogpuffx->name; ?></h3>
+    <a href="<?php echo $blogpuffx->author_link; ?>"><h3><?php echo $blogpuffx->name; ?></h3></a>
     <p><?php echo $blogpuffx->title; ?></p>
     <a href="<?php echo $blogpuffx->permalink ?>">Läs senaste inlägg &raquo;</a>
   </div>
