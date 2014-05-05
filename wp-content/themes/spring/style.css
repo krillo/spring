@@ -10,11 +10,40 @@ Template: reptilo
 @import url("style.mashmenu.css");
 
 
-@media (max-width: 768px) {
+@media (max-width: 485px) {
+article-small img {float: none!important;width: 100%!important;height: 100%!important;padding-right: 0px!important;}
+article img {background-color: transparent;border: none;padding: 0;width: 100%!important;height: 100%!important;float: none!important;}
+h1 {font-family: 'Georgia', serif;color: #222;font-size: 28px!important;}
+.article-small h1 {font-size: 28px!important;letter-spacing: 0.02em;margin-bottom: 13px;}
+#adrotate_widgets-3 {display: none;}
+
+#logo {display: none;}
+  #omslag-box {display: none;}
+  #spring-header-container{display: none;}
+  #article-feed {margin-top: 10px;}
+  .container{padding-left: 0px;padding-right: 0px;}
+  #spring-container{border:none;}
+  #social-tab{display: none;}
+  #instagram-feed{display: none;}
+  #woodojo_instagram-2 {display: none;}
+  .prenpuff{display: none;}
+  .widget_adrotate_widgets img{width:100%;}
+
+}
+
+
+@media (min-width: 485px) and (max-width: 768px) {
   #logo {display: none;}
   #omslag-box {display: none;}
   #spring-header-container{display: none;}
   #article-feed {margin-top: 10px;}
+  .container{padding-left: 0px;padding-right: 0px;}
+  #spring-container{border:none;}
+  #social-tab{display: none;}
+  #instagram-feed{display: none;}
+  #woodojo_instagram-2 {display: none;}
+  .prenpuff{display: none;}
+  .widget_adrotate_widgets img{width:100%;}
 
 }
 

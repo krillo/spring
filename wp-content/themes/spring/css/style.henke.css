@@ -14,10 +14,10 @@ Author URI: http://www.oresundswebb.se/  http://reptilo.se
 4. Instagram
 5. Menu
 6. Pren. puff
-7. Simple Share Buttons Adder
+7. Related article
+8. Simple Share Buttons Adder
 
 */
-
 
 
 /* Theme Customization */
@@ -29,6 +29,7 @@ a:visited{text-decoration: none;color:#f59d00;}
 
 img, article img{border-radius: 0px;}
 
+.widget_adrotate_widgets img{display: block;margin-left: auto;margin-right: auto;}
 
 /* 1. Pay With a Like */
 .pwal_content_wrapper { width: 100%; }
@@ -106,13 +107,15 @@ ul.nav-tabs li a, ul.nav-tabs li a:visited {color: #222;font-weight: bold;}
 
 .widget_woodojo_instagram ul.alignleft li {float: left;margin: 0 0em 1em 0;}
 
+.instagram-photos img{width: 100%!important;height: auto!important;}
+
+
 .ig-b- { display: inline-block; }
 .ig-b- img { visibility: hidden; }
 .ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
 .ig-b-v-24 { width: 137px; height: 24px; background: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0; }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
 .ig-b-v-24 { background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png); background-size: 160px 178px; } }
-
 
 /* 5. Menu */
 ul.tweets {padding-left: 0px;}
@@ -130,6 +133,16 @@ li.tweet-number-1 {list-style-type: none;}
 .spring-form-sidebar{width: 100%;}
 .spring-form-sidebar-button{float: right;margin-top:5px;}
 
+/* 7. Related article */
+.yarpp-thumbnails-horizontal .yarpp-thumbnail-title{font-family: 'Georgia', serif;font-size: 13px;color: #222;
+font-weight: bold;}
+
+.yarpp-thumbnail > img, .yarpp-thumbnail-default {width: 160px;height: 130px;margin: 5px;}
+
+.yarpp-thumbnails-horizontal .yarpp-thumbnail {border:none;width: 130px;height: 170px;margin: 0px;margin-left: 0px;vertical-align: top;}
+
+.yarpp-related h3 {background-image: url("img/bg_sidebar.png");background-repeat: repeat-y;background-size: 100%;font-size: 14px;color: #FFF;padding-left: 7px;padding: 3px 0 3px 7px;font-weight: bold;letter-spacing: 0.06em;list-style: none;margin-bottom: 8px;}
+
 
 /*stop showin' anoying ads from WPMU*/
 #wpmu-install-dashboard{display:none;}
@@ -146,4 +159,12 @@ article.post img {margin-bottom: 15px;}
 .article-small p{font-size: 13px; line-height: 18px}
 
 .pagination .current, .pagination .current:hover {z-index: 2;color: #FFF;cursor: default;background-color: #fcbe00;border-color: #fcbe00;}
+
+
+/* Article Widget */
+.cat-puff {border-bottom: 1px dotted #C0BEBE;min-height: 70px;}
+.cat-puff h3 {font-size: 13px;margin-bottom: 5px;margin-top: 9px;}
+.cat-puff p {font-size: 11px;line-height: 14px;margin-bottom: 2px;}
+.cat-puff img {width: 70px;height: 60px;float: left;min-width: default;margin-right: 10px;margin-left: 0px;}
+
 
