@@ -5,7 +5,7 @@
  */
 $args = array(
     'post_type' => 'post',
-    'posts_per_page' => 5,
+    'posts_per_page' => 8,
     'cat' => -14,
     'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
 );
@@ -27,6 +27,12 @@ if (have_posts()):
         ad();
         small();
         break;
+      case 8:
+        big();
+        break;
+      case 9:
+        big();
+        break;      
       default:
         small();
         break;
