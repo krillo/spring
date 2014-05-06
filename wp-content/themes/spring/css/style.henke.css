@@ -141,7 +141,7 @@ font-weight: bold;}
 
 .yarpp-thumbnails-horizontal .yarpp-thumbnail {border:none;width: 130px;height: 170px;margin: 0px;margin-left: 0px;vertical-align: top;}
 
-.yarpp-related h3 {background-image: url("img/bg_sidebar.png");background-repeat: repeat-y;background-size: 100%;font-size: 14px;color: #FFF;padding-left: 7px;padding: 3px 0 3px 7px;font-weight: bold;letter-spacing: 0.06em;list-style: none;margin-bottom: 8px;}
+.yarpp-related h3 {background-image: url("../img/bg_sidebar.png");background-repeat: repeat-y;background-size: 100%;font-size: 14px;color: #FFF;padding-left: 7px;padding: 3px 0 3px 7px;font-weight: bold;letter-spacing: 0.06em;list-style: none;margin-bottom: 8px;}
 
 
 /*stop showin' anoying ads from WPMU*/
