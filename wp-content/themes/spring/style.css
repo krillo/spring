@@ -44,7 +44,6 @@ h1 {font-family: 'Georgia', serif;color: #222;font-size: 28px!important;}
   #woodojo_instagram-2 {display: none;}
   .prenpuff{display: none;}
   .widget_adrotate_widgets img{width:100%;}
-
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -56,6 +55,8 @@ h1 {font-family: 'Georgia', serif;color: #222;font-size: 28px!important;}
 @media (min-width: 991px){
   #logo-colapsed{display: none;}
 }
+
+
 
 #logo-colapsed{width:280px;float:left;margin-right: 15px;}
 #logo-colapsed a img{width: 100%;padding-top: 25px;}
@@ -174,3 +175,8 @@ li.widget {list-style: none;margin-bottom: 25px;}
 /*HenkeStyle*/
 /*MashMenu*/
 .mashmenu .sub-channel{min-height:225px;}
+
+
+@media (min-width: 990px) and (max-width: 1199px) {
+  .posttype-container {font-size: 8px;}  
+}

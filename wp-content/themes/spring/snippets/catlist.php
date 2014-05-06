@@ -3,16 +3,20 @@
 <?php
   $category_name = 'artiklar';
   $nbr = 5;
-  $nbrDigits = 50;
+  $nbrTitle = 40;
+  $nbrExerpt = 42;
   global $post;
   //Display posts that have this category and any children of that category
   $args = array('category_name' => $category_name, 'posts_per_page' => $nbr);
   $loop = new WP_Query($args);
   if ($loop->have_posts()):
     while ($loop->have_posts()) : $loop->the_post();
-      $exerpt = mb_substr(get_the_excerpt(), 0, $nbrDigits) . '...';
       //$exerpt = get_the_excerpt();
-      $title = get_the_title();
+      $exerpt = mb_substr(get_the_excerpt(), 0, $nbrExerpt) . '...';
+      $title =  get_the_title();    
+      if(mb_strlen($title) > $nbrTitle){
+        $title =  mb_substr(get_the_title(), 0, $nbrTitle) . '...';
+      }
       $permalink = get_permalink();
       $img = '';
       if (has_post_thumbnail()){
@@ -20,11 +24,11 @@
       } 
       $out .= <<<OUT
   <div class="cat-puff">
-    $img
-    <h3>$title</h3>
-    <p>$exerpt</p>
-    <a href="$permalink">Läs mer...</a>
+    <a href="$permalink">$img</a>
+    <a href="$permalink"><h3>$title</h3></a>
+    <p>$title</o>
   </div>
+  <div class="clearfix"></div>
 OUT;
     endwhile;
   endif;
