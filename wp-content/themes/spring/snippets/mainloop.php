@@ -29,9 +29,6 @@ if (have_posts()):
         break;
       case 8:
         big();
-        break;
-      case 9:
-        big();
         break;      
       default:
         small();

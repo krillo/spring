@@ -27,7 +27,6 @@ foreach ($latestblogs as $blogpuffx) :
   ?>
   <div class="blogg-puff">
     <a href="<?php echo $blogpuffx->author_link; ?>"><img src="<?php echo $blogpuffx->img; ?>" class="img-circle" /></a>
-    
     <a href="<?php echo $blogpuffx->author_link; ?>"><h3><?php echo $blogpuffx->name; ?></h3></a>
     <p><?php echo $blogpuffx->title; ?></p>
     <a href="<?php echo $blogpuffx->permalink ?>">Läs senaste inlägg &raquo;</a>
