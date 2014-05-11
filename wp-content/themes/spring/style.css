@@ -180,3 +180,8 @@ li.widget {list-style: none;margin-bottom: 25px;}
 @media (min-width: 990px) and (max-width: 1199px) {
   .posttype-container {font-size: 8px;}  
 }
+
+
+/* contact 7 nyhetsbrev */
+input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-email.spring-form-sidebar{width:68%;}
+input.wpcf7-form-control.wpcf7-submit.spring-form-sidebar-button{margin-top: 0;}
