@@ -76,9 +76,8 @@ class Omslag {
                 <h2>Aktuellt nummer</h2>
                 <span class="omslag-nummer" style="">Spring / Nr $number / $year </span>
                 <ul class="omslag-list">    
-                  <li><i class="fa fa-caret-right"></i><a href="#">Se hela innehållet</a></li>
-                  <li><i class="fa fa-caret-right"></i><a href="/prenumerera/">Prenumerera på Spring</a></li>
-                  <li><i class="fa fa-caret-right"></i><a href="#">Läs tidningen digitalt som prenumerant</a></li>
+                  <li><i class="fa fa-caret-right"></i><a href="/innehall/">Innehållet</a></li>
+                  <li><i class="fa fa-caret-right"></i><a href="/prenumerera/">Prenumerera</a></li>
                 </ul>    
 OUT;
 
