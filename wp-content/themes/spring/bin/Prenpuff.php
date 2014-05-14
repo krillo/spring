@@ -21,6 +21,7 @@ class Prenpuff {
 
   function __construct() {
     add_action('init', array($this, 'create_post_type'));
+    $this->init_acf_fields();
   }
 
   /**
@@ -58,6 +59,46 @@ class Prenpuff {
         'supports' => array('title', 'thumbnail') //, 'comments' )
     );
     register_post_type('prenpuff', $args);
+  }
+
+  function init_acf_fields() {
+    if (function_exists("register_field_group")) {
+      register_field_group(array(
+          'id' => 'acf_prenpuff',
+          'title' => 'prenpuff',
+          'fields' => array(
+              array(
+                  'key' => 'field_53735c3b448d1',
+                  'label' => 'Välj sida att länka till',
+                  'name' => 'page_link',
+                  'type' => 'page_link',
+                  'post_type' => array(
+                      0 => 'page',
+                  ),
+                  'allow_null' => 0,
+                  'multiple' => 0,
+              ),
+          ),
+          'location' => array(
+              array(
+                  array(
+                      'param' => 'post_type',
+                      'operator' => '==',
+                      'value' => 'prenpuff',
+                      'order_no' => 0,
+                      'group_no' => 0,
+                  ),
+              ),
+          ),
+          'options' => array(
+              'position' => 'normal',
+              'layout' => 'default',
+              'hide_on_screen' => array(
+              ),
+          ),
+          'menu_order' => 0,
+      ));
+    }
   }
 
   function printPrenpuff($posttype = 'prenpuff', $nbr = 1) {
