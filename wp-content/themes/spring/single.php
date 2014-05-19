@@ -8,7 +8,7 @@
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
               <h1><?php the_title(); ?></h1>
               <span class="article-cat"><?php $showCat = true; include('snippets/pubinfo.php'); ?></span>
-              <?php the_post_thumbnail('medium'); ?>
+              <?php //the_post_thumbnail('medium'); ?>
               <?php the_content(); ?>
               <?php comments_template(); ?>
             </article>
