@@ -18,7 +18,6 @@ include_once get_template_directory() . "/bin/ReptiloLitteraturtips.php";
 /* Henric */
 add_theme_support("pay_with_a_like_style");
 
-
 /**
  * custom size for images
  */
