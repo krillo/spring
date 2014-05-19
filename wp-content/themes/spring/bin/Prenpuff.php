@@ -108,9 +108,10 @@ class Prenpuff {
     if ($prenloop->have_posts()):
       while ($prenloop->have_posts()) : $prenloop->the_post();
         $img = get_the_post_thumbnail();
+        $page_link = get_field('page_link');
         $out .= <<<OUT
         <div class="prenpuff">
-              $img
+              <a href="$page_link" alt="">$img</a>
         </div>              
 OUT;
       endwhile;
