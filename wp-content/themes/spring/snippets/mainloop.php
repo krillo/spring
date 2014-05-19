@@ -35,7 +35,8 @@ if (have_posts()):
         break;
     }
   endwhile;
-  if (function_exists('bootstrap3_pagination')) {
+  global $hidePagnination;
+  if (!$hidePagnination && function_exists('bootstrap3_pagination')) {
     bootstrap3_pagination();
   }
 endif;

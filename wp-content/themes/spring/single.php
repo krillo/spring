@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php if (is_single()) {$hidePagnination = true;} ?>
 <div class="row clearfix">
   <div class="col-md-6 column">
     <?php if (have_posts()) : while (have_posts()) : the_post();
@@ -7,7 +8,10 @@
           <div class="col-md-12">
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
               <h1><?php the_title(); ?></h1>
-              <span class="article-cat"><?php $showCat = true; include('snippets/pubinfo.php'); ?></span>
+              <span class="article-cat"><?php
+                $showCat = true;
+                include('snippets/pubinfo.php');
+                ?></span>
               <?php //the_post_thumbnail('medium'); ?>
               <?php the_content(); ?>
               <?php comments_template(); ?>
