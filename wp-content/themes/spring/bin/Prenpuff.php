@@ -65,11 +65,25 @@ class Prenpuff {
     if (function_exists("register_field_group")) {
       register_field_group(array(
           'id' => 'acf_prenpuff',
-          'title' => 'prenpuff',
+          'title' => 'Prenpuff',
           'fields' => array(
               array(
-                  'key' => 'field_53735c3b448d1',
-                  'label' => 'Välj sida att länka till',
+                  'key' => 'field_537d0310c5267',
+                  'label' => 'Länka till extern sida',
+                  'name' => 'extern_link',
+                  'type' => 'text',
+                  'instructions' => 'Om du inte fyller i något här så används den interna länken nedan.
+	Obs glöm inte http://',
+                  'default_value' => '',
+                  'placeholder' => 'http://',
+                  'prepend' => '',
+                  'append' => '',
+                  'formatting' => 'none',
+                  'maxlength' => '',
+              ),
+              array(
+                  'key' => 'field_537d0263c5266',
+                  'label' => 'Välj intern sida att länka till',
                   'name' => 'page_link',
                   'type' => 'page_link',
                   'post_type' => array(
@@ -94,6 +108,20 @@ class Prenpuff {
               'position' => 'normal',
               'layout' => 'default',
               'hide_on_screen' => array(
+                  0 => 'permalink',
+                  1 => 'the_content',
+                  2 => 'excerpt',
+                  3 => 'custom_fields',
+                  4 => 'discussion',
+                  5 => 'comments',
+                  6 => 'revisions',
+                  7 => 'slug',
+                  8 => 'author',
+                  9 => 'format',
+                  10 => 'featured_image',
+                  11 => 'categories',
+                  12 => 'tags',
+                  13 => 'send-trackbacks',
               ),
           ),
           'menu_order' => 0,
@@ -108,10 +136,14 @@ class Prenpuff {
     if ($prenloop->have_posts()):
       while ($prenloop->have_posts()) : $prenloop->the_post();
         $img = get_the_post_thumbnail();
-        $page_link = get_field('page_link');
+        if (get_field('extern_link')) {
+          $link = get_field('extern_link');
+        } else {
+          $link = get_field('page_link');
+        }
         $out .= <<<OUT
         <div class="prenpuff">
-              <a href="$page_link" alt="">$img</a>
+              <a href="$link" alt="">$img</a>
         </div>              
 OUT;
       endwhile;
