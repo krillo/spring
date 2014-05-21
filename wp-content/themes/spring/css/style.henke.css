@@ -33,6 +33,8 @@ div#colorbox{width: 100%!important;height: 100%!important;}
 
 .widget_adrotate_widgets img{display: block;margin-left: auto;margin-right: auto;}
 
+.wp-caption-text {text-align: left;background: #f8f8f8;margin-top: -15px;line-height: 15px;padding-bottom: 5px;padding-top: 5px;}
+
 
 /* Footer */
 footer.row.clearfix {border-top: 1px solid #C0BEBE;margin-top: 45px;padding-top: 60px;}
