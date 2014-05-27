@@ -5,6 +5,7 @@
   $nbr = 5;
   $nbrTitle = 40;
   $nbrExerpt = 42;
+  $out = '';
   global $post;
   //Display posts that have this category and any children of that category
   $args = array('category_name' => $category_name, 'posts_per_page' => $nbr);
@@ -26,7 +27,7 @@
   <div class="cat-puff">
     <a href="$permalink">$img</a>
     <a href="$permalink"><h3>$title</h3></a>
-    <p>$title</o>
+    <p>$exerpt</o>
   </div>
   <div class="clearfix"></div>
 OUT;
