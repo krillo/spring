@@ -17,6 +17,7 @@ include_once get_template_directory() . "/bin/ReptiloLitteraturtips.php";
 
 /* Henric */
 add_theme_support("pay_with_a_like_style");
+add_image_size( 'yarpp-thumbnail', 172, 125, true );
 
 /**
  * custom size for images
