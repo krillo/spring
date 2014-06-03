@@ -229,3 +229,10 @@ function my_remove_menu_pages() {
 }
 
 //admin.php?page=wpseo_dashboard
+
+
+function gpp_jpeg_quality_callback($arg){
+  return (int)100;
+}
+
+add_filter('jpeg_quality', 'gpp_jpeg_quality_callback');
