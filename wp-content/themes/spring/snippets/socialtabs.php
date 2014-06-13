@@ -59,7 +59,8 @@
               js.src = p + "://platform.twitter.com/widgets.js";
               fjs.parentNode.insertBefore(js, fjs);
             }
-          }(document, "script", "twitter-wjs");</script>
+          }(document, "script", "twitter-wjs");
+         </script>
         <!-- Twitter iframe end -->
       </div>
     </div>

@@ -48,7 +48,7 @@ function big() {
   <div class="row">
     <div class="col-md-12" id="article-feed">
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <a href="<?php the_permalink(); ?>" ><?php the_post_thumbnail('medium'); ?></a>
+        <a href="<?php the_permalink(); ?>" ><?php the_post_thumbnail('full'); ?></a>
         <a href="<?php the_permalink(); ?>" ><h1 class="h1-big"><?php the_title(); ?></h1></a>
         <span class="article-cat"><?php $showCat = false; include('pubinfo.php'); ?></span>
         <p><span class="article-cat"><?php echo rep_GetOneCategory(); ?></span>&nbsp;&nbsp;<?php echo get_the_excerpt(); ?>
