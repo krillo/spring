@@ -1,0 +1,1 @@
+<p>Email the author: <a href="mailto:<?php echo get_the_author_meta('user_email', 25); ?>"><?php the_author_meta('display_name', 25); ?></a></p>

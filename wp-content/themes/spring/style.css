@@ -158,4 +158,5 @@ input.wpcf7-form-control.wpcf7-submit.spring-form-sidebar-button{margin-top: 0;}
 .sponsor img{text-align: center;}
 .sponsor a{overflow:hidden;}
 
-.sponsor img{text-align: center;margin-left: auto;margin-right: auto;}
+.sponsor img{min-width: 100%;padding-bottom: 15px;}
+body.archive article .archive-content, body.search article .archive-content{border-bottom:none;}

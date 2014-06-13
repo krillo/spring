@@ -5,8 +5,8 @@
  */
 $args = array(
     'post_type' => 'post',
-    'posts_per_page' => 8,
-    'cat' => '-5,-132',    //-5 = Bloggar -132 = BLOGGAR 
+    'posts_per_page' => 10,
+    'cat' => '-320,-132',    //-320 = Bloggar -132 = BLOGGAR 
     'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
 );
 

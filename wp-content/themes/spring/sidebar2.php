@@ -9,4 +9,5 @@
   
   <div class="sidebar-header"><i class="fa fa-caret-right"></i> Boktips</div>
   <?php global $littTips; if (method_exists($littTips,'printLitteraturtips')) $littTips->printLitteraturtips(); ?>
+  <?php global $rc; if (method_exists($rc,'rep_carousel')) $rc->rep_carousel('rep-carousel', false); ?>
 </div>
