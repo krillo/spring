@@ -56,7 +56,7 @@
                 <div class="col-md-6 column" id="logo">
                   <a href="<?php echo home_url('/'); ?>"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-tagline.png" /></a>
                 </div>
-                <div class="col-md-6 column " id="omslag-box">
+                <div class="col-md-3 column " id="omslag-box">
                   <div class="row clearfix">
                     <div class="col-md-12 column ">
                       <div class="" id="logo-colapsed">
@@ -67,6 +67,15 @@
                       if (method_exists($omslag, 'printOmslag'))
                         $omslag->printOmslag();
                       ?>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 column " id="header-sponsor">
+                  <div class="row clearfix">
+                    <div class="col-md-12 column ">
+                      <div class="" id="header-sponsor-widget">
+                        <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("header-sponsor")) : endif; ?>
+                      </div>
                     </div>
                   </div>
                 </div>
