@@ -71,6 +71,7 @@ add_action('widgets_init', 'spring_widgets_init');
  * Enqueues scripts and styles for frontend.
  */
 function spring_enqueue_scripts() {
+  wp_enqueue_style('style', get_stylesheet_directory_uri() . '/style.css', null , '2014-06-13');
   wp_enqueue_style('style.henke', get_stylesheet_directory_uri() . '/css/style.henke.css', array('woodojo-social-widgets', 'fbSEOwpcomments', 'fbSEOStylesheet', 'style', 'font_awesome', 'thickbox'), '2014-04-03');
   wp_enqueue_style('style.mashmenu', get_stylesheet_directory_uri() . '/css/style.mashmenu.css', array('woodojo-social-widgets', 'fbSEOwpcomments', 'fbSEOStylesheet', 'style', 'font_awesome', 'thickbox'), '2014-03-26');
 }
