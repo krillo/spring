@@ -18,7 +18,7 @@ return array(
 	),
 	'notes.minify_error' => false,
 	'minify.error.last' => '',
-	'minify.error.notification' => '',
+	'minify.error.notification' => 'admin',
 	'minify.error.notification.last' => 0,
 	'minify.error.file' => '',
 	'track.maxcdn_signup' => 0,
@@ -28,5 +28,5 @@ return array(
 	'notes.remove_w3tc' => false,
 	'notes.hide_extensions' => array(
 	),
-	'evaluation.reminder' => 1400418761,
+	'evaluation.reminder' => 1404915653,
 );
