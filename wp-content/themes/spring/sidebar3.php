@@ -9,8 +9,10 @@ $sponsimg1 = get_field('sponsorbild1', 'user_' . $curauth->ID);
 
 
 <div class="" id="bio">
+<div class="bio-inner"
   <img src="<?php echo $profileimg; ?>">
   <?php the_field('biografi', 'user_' . $curauth->ID); ?>
+</div>
 </div>
 
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("sidebar1")) : endif; ?>  
