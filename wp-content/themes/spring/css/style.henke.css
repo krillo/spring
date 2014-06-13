@@ -91,9 +91,12 @@ For correct display, you may need to change other css properties too*/
 
 ul.gce-list {padding-left:0px;}
 li.gce-feed-2 {list-style-type: none;list-style-type: none;margin-bottom: 15px;border-bottom: 1px dotted #C0BEBE;padding-bottom: 15px;}
+li.gce-feed-3 {list-style-type: none;list-style-type: none;margin-bottom: 15px;border-bottom: 1px dotted #C0BEBE;padding-bottom: 15px;}
+li.gce-feed-4 {list-style-type: none;list-style-type: none;margin-bottom: 15px;border-bottom: 1px dotted #C0BEBE;padding-bottom: 15px;}
+.gce-list-event.gce-tooltip-event {font-size: 20px;font-weight: bold;color: #000;}
 .gce-page-list .gce-list div span {color: #222222; font-weight: bold;}
 .gce-page-list .gce-list .gce-list-event {background-color: #ffffff;}
-
+.gce-page-list .gce-list .gce-list-title {font-weight: normal;font-style: italic;font-size: 11px;}
 
 .description {margin-top: 10px;}
 
