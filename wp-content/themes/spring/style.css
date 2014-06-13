@@ -155,3 +155,7 @@ input.wpcf7-form-control.wpcf7-submit.spring-form-sidebar-button{margin-top: 0;}
 .wp-caption {padding: 0;border:none;}
 
 .archive h2{font-size:20px;}
+.sponsor img{text-align: center;}
+.sponsor a{overflow:hidden;}
+
+.sponsor img{text-align: center;margin-left: auto;margin-right: auto;}
