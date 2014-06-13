@@ -2,7 +2,6 @@
 <div class="row clearfix">
   <div class="col-md-8 column">
     <?php if (have_posts()) : ?>
-      <h1><?php single_cat_title(); ?></h1>
       <?php
       $curauth = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('author_name')) : get_userdata(get_query_var('author'));
       ?>
