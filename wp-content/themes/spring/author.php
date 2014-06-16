@@ -4,6 +4,7 @@
     <?php if (have_posts()) : ?>
       <?php
       $curauth = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('author_name')) : get_userdata(get_query_var('author'));
+      $curauthID = $curauth->ID;
       ?>
       <?php
       while (have_posts()) : the_post();

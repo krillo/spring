@@ -4,15 +4,12 @@ if (is_single()) {
   $hidePagnination = true;
 }
 $categories = get_the_category();
-$expected_ids = array(132);
-if (is_single() && check_category_family($categories, $expected_ids)) {
+$bloggParentCatIds = array(132);
+if (is_single() && check_category_family($categories, $bloggParentCatIds)) {
   $mainWidth = 'col-md-8';
   $sidebarWidth = 'col-md-4';
   $blogg = true;
-  $curauth = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('author_name')) : get_userdata(get_query_var('author'));
-  echo '->' . $curauth;
-  $author = get_the_author();
-  echo '->' . $author;
+  $curauthID = get_the_author_meta('ID');
 } else {
   $mainWidth = 'col-md-6';
   $sidebarWidth = 'col-md-6';
