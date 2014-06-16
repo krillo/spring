@@ -1,0 +1,10 @@
+/*
+Description: The print css for Spring
+Author: Kristian Erendi
+Author URI: http://reptilo.se/
+Date: 2014-05-29
+*/
+
+body{padding:0;}
+a[href]:after {content: none !important;}
+

@@ -1,7 +1,7 @@
 <?php
 get_header();
 $categories = get_the_category();
-$bloggParentCatIds = array(132);
+$bloggParentCatIds = array(132, 320);  //uggly hack this one!
 if (is_archive() && check_category_family($categories, $bloggParentCatIds)) {
   $mainWidth = 'col-md-8';
   $sidebarWidth = 'col-md-4';

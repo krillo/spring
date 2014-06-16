@@ -17,7 +17,7 @@ include_once get_template_directory() . "/bin/ReptiloCarousel.php";
 
 /* Henric */
 add_theme_support("pay_with_a_like_style");
-add_image_size( 'yarpp-thumbnail', 172, 125, true );
+add_image_size('yarpp-thumbnail', 172, 125, true);
 
 /**
  * custom size for images
@@ -77,9 +77,10 @@ add_action('widgets_init', 'spring_widgets_init');
  * Enqueues scripts and styles for frontend.
  */
 function spring_enqueue_scripts() {
-  wp_enqueue_style('style', get_stylesheet_directory_uri() . '/style.css', null , '2014-06-13');
+  wp_enqueue_style('style', get_stylesheet_directory_uri() . '/style.css', null, '2014-06-13');
   wp_enqueue_style('style.henke', get_stylesheet_directory_uri() . '/css/style.henke.css', array('woodojo-social-widgets', 'fbSEOwpcomments', 'fbSEOStylesheet', 'style', 'font_awesome', 'thickbox'), '2014-04-03');
   wp_enqueue_style('style.mashmenu', get_stylesheet_directory_uri() . '/css/style.mashmenu.css', array('woodojo-social-widgets', 'fbSEOwpcomments', 'fbSEOStylesheet', 'style', 'font_awesome', 'thickbox'), '2014-03-26');
+  wp_enqueue_style('spring.print', get_stylesheet_directory_uri() . '/css/spring.print.css', array(), '2014-05-29', 'print');
 }
 
 add_action('wp_enqueue_scripts', 'spring_enqueue_scripts');
@@ -203,43 +204,41 @@ RB;
 
 function reptiloGetCategorys() {
   /*
-  //use this instead to get a linked list
-  $catlist = the_category(',');
-  //echo $catlist;
-  $catarray = explode(',',$catlist);
-  print_r($catarray);
-  */
+    //use this instead to get a linked list
+    $catlist = the_category(',');
+    //echo $catlist;
+    $catarray = explode(',',$catlist);
+    print_r($catarray);
+   */
   $categorys = get_the_category();
   //print_r($categorys); 
   $category = $categorys[0]->cat_name;
   if (count($categorys) > 1) {
     $category .= ', ' . $categorys[1]->cat_name;
   }
-  return $category; 
+  return $category;
 }
 
+add_action('admin_init', 'my_remove_menu_pages');
 
-
-add_action( 'admin_init', 'my_remove_menu_pages' );
- 
 function my_remove_menu_pages() {
-	// If the user does not have access to publish posts
-	if(!current_user_can('delete_plugins')) {
-		// Remove the "SEO" menu
-		remove_menu_page('tools.php');
+  // If the user does not have access to publish posts
+  if (!current_user_can('delete_plugins')) {
+    // Remove the "SEO" menu
+    remove_menu_page('tools.php');
     remove_menu_page('admin.php?page=wpcf7');
     remove_menu_page('edit.php?post_type=prenpuff');
     remove_menu_page('edit.php?post_type=omslag');
     remove_menu_page('edit.php?post_type=litteraturtips');
     remove_menu_page('admin.php?page=wpseo_bulk-title-editor');
-	}
+  }
 }
 
 //admin.php?page=wpseo_dashboard
 
 
-function gpp_jpeg_quality_callback($arg){
-  return (int)100;
+function gpp_jpeg_quality_callback($arg) {
+  return (int) 100;
 }
 
 add_filter('jpeg_quality', 'gpp_jpeg_quality_callback');

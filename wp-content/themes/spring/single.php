@@ -4,7 +4,7 @@ if (is_single()) {
   $hidePagnination = true;
 }
 $categories = get_the_category();
-$bloggParentCatIds = array(132);
+$bloggParentCatIds = array(132, 320);  //hardcoded categories -uggly hack this one! 
 if (is_single() && check_category_family($categories, $bloggParentCatIds)) {
   $mainWidth = 'col-md-8';
   $sidebarWidth = 'col-md-4';
@@ -30,6 +30,7 @@ if (is_single() && check_category_family($categories, $bloggParentCatIds)) {
                 ?></span>
               <?php //the_post_thumbnail('medium'); ?>
               <?php the_content(); ?>
+              <?php include 'snippets/byline.php';?>
               <?php comments_template(); ?>
             </article>
           </div>  
