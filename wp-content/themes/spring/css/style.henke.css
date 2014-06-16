@@ -186,6 +186,9 @@ div#bio {margin-bottom: 40px;background-color: #FFEA97;padding: 5px;}
 .bio-inner{border: 1px dashed #D2C17C;padding: 10px;}
 #bio h2 {font-size: 40px;font-weight: bold;padding-bottom: 20px;}
 
+.carousel-inner {margin-top: 20px;margin-bottom: 20px;}
+.carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {display: none;}
+.carousel-control.left, .carousel-control.right {background-image: none;background-image: none;}
 
 /* 11. @Media - Responsive design */
 
