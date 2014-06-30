@@ -16,7 +16,7 @@ if (is_archive() && check_category_family($categories, $bloggParentCatIds)) {
 <div class="row clearfix">
   <div class="<?php echo $mainWidth; ?> column">
     <?php if (have_posts()) : ?>
-      <h1><?php single_cat_title(); ?></h1>
+      <!--h1><?php //single_cat_title(); ?></h1-->
       <?php while (have_posts()) : the_post(); ?>
         <div class="row">
           <article id="post-<?php the_ID(); ?>" class="col-md-12">
