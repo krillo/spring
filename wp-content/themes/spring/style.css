@@ -81,7 +81,7 @@ li.widget {list-style: none;margin-bottom: 25px;}
 
 /*omslag*/
 #omslag-box img{width:90px;height: auto;float:left;margin-right: 10px;}
-#omslag-box h2{margin-top: 0;margin-bottom: 0;}
+#omslag-box h2{margin-top: 0;margin-bottom: 0;font-size: 16px;}
 #omslag-box ul{padding:0; list-style: none;margin-top: 40px;}
 #omslag-box ul i {margin-right: 5px;}
 
