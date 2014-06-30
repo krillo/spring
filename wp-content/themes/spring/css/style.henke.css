@@ -253,10 +253,13 @@ div#bio {margin-bottom: 40px;background-color: #FFEA97;padding: 5px;}
   font-weight: bold;margin: 0px!important;width: 100%!important;}
   .yarpp-thumbnail > img, .yarpp-thumbnail-default {width: 138px!important;height: 125px!important;margin: 0px!important;margin-bottom: 5px!important;}
   .yarpp-thumbnails-horizontal .yarpp-thumbnail {border: none!important;width: 138px!important;height: auto!important;margin: 0px!important;}
+  .widget.widget_search {display: none;}
+  #header-sponsor-widget{display: none;}
 }
 
 @media (min-width: 1200px){
   #logo-colapsed{display: none;}
+  .widget.widget_search {display: none;}
 }
 
 

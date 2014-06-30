@@ -54,7 +54,7 @@
               <div class="row clearfix">
 
                 <div class="col-md-6 column" id="logo">
-                  <a href="<?php echo home_url('/'); ?>"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-tagline.png" /></a>
+                  <a href="<?php echo home_url('/'); ?>"><img alt="" src="<?php echo get_stylesheet_directory_uri(); ?>/img/spring_logga.png" /></a>
                 </div>
                 <div class="col-md-3 column " id="omslag-box">
                   <div class="row clearfix">

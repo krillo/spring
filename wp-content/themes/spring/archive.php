@@ -21,12 +21,13 @@ if (is_archive() && check_category_family($categories, $bloggParentCatIds)) {
         <div class="row">
           <article id="post-<?php the_ID(); ?>" class="col-md-12">
             <header>
+              <a href="<?php the_permalink(); ?>" ><?php the_post_thumbnail('full'); ?></a>
               <h2><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
               <span class="article-cat"><?php $showCat = true;
         include('snippets/pubinfo.php'); ?></span>
             </header>
             <div class="archive-content"><?php the_excerpt(); ?>
-              <a href="<?php echo get_permalink(); ?>"> Läs mer &raquo;</a>
+              <a href="<?php echo get_permalink(); ?>"><span class="read-more">Läs mer <i class="fa fa-angle-double-right"></i></span></a>
             </div>
           </article>
         </div>
