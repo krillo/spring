@@ -168,3 +168,6 @@ article.post .rep-byline img{margin-right: 10px;float:left;width:40px;height:40p
 .rep-byline-date{float:right;}
 .rep-byline-date i {margin-right: 5px;}
 
+
+/* carousel */
+.carousel img {width: 100%;}
