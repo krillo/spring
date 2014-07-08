@@ -243,3 +243,21 @@ function gpp_jpeg_quality_callback($arg) {
 }
 
 add_filter('jpeg_quality', 'gpp_jpeg_quality_callback');
+
+
+/**
+ * Check if $blogg_cats is one of the $categories, 
+ * Then it is a blogg listing
+ *   
+ * @param type $categories
+ * @param type $expected_ids
+ * @return boolean
+ */
+function isBloggListing($categories, $blogg_cats ){
+  foreach( $categories as $i ){
+    if( in_array( intval( $i->category_parent ), $blogg_cats ) ){
+      return true;
+    }
+  }
+}
+
