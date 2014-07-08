@@ -254,7 +254,8 @@ div#bio {margin-bottom: 40px;background-color: #FFEA97;padding: 5px;}
   .yarpp-thumbnail > img, .yarpp-thumbnail-default {width: 138px!important;height: 125px!important;margin: 0px!important;margin-bottom: 5px!important;}
   .yarpp-thumbnails-horizontal .yarpp-thumbnail {border: none!important;width: 138px!important;height: auto!important;margin: 0px!important;}
   .widget.widget_search {display: none;}
-  #header-sponsor-widget{display: none;}
+  #omslag-box img {display: none;}
+  #omslag-box ul {margin-top: 10px;}
 }
 
 @media (min-width: 1200px){

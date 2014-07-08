@@ -21,6 +21,7 @@ if (have_posts()):
         big();
         break;
       case 4:
+        ad1();
         big();
         break;
       case 5:
@@ -73,6 +74,16 @@ function small() {
           <a href="<?php the_permalink(); ?>" ><span class="read-more">Läs mer <i class="fa fa-angle-double-right"></i></span></a>
         </p>
       </article>
+    </div>  
+  </div>  
+  <?php
+}
+
+function ad1() {
+  ?>
+  <div class="row">
+    <div class="col-md-12">
+      <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("ad-loop-main")) : endif; ?>
     </div>  
   </div>  
   <?php
