@@ -64,6 +64,12 @@ function spring_widgets_init() {
       'before_widget' => '<div class="ad-tag"></div><div id="%1$s" class="widget %2$s adrotate-loop">',
       'after_widget' => '</div>',
   ));
+    register_sidebar(array(
+      'name' => __('Annons flöde överst'),
+      'id' => 'ad-loop-main',
+      'before_widget' => '<div class="ad-tag"></div><div id="%1$s" class="widget %2$s adrotate-loop">',
+      'after_widget' => '</div>',
+  ));
   register_sidebar(array(
       'name' => __('Header Sponsor'),
       'id' => 'header-sponsor',
