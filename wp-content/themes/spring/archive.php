@@ -48,7 +48,11 @@ switch ($sidebarType) {
         <div class="row">
           <article id="post-<?php the_ID(); ?>" class="col-md-12">
             <header>
+              <?php if($sidebarType == 'general_blogg_archive' || $sidebarType == 'blogg_archive'):?>
+              <a href="<?php the_permalink(); ?>" ><?php the_post_thumbnail('blogg-thumbnail'); ?></a>
+              <?php else: ?>
               <a href="<?php the_permalink(); ?>" ><?php the_post_thumbnail('full'); ?></a>
+              <?php endif; ?>
               <h2><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
               <span class="article-cat"><?php
                 $showCat = true;
