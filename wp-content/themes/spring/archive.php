@@ -1,9 +1,10 @@
 <?php
 get_header();
 $sidebarType = 'standard';
+echo $_SERVER[REQUEST_URI];
 if ($_SERVER[REQUEST_URI] == "/kategori/bloggar/") {
   $sidebarType = 'general_blogg_archive';
-}
+}    
 $categories = get_the_category();
 $bloggParentCatIds = array(132, 320);  //hardcoded categories - uggly hack this one! 
 if (is_archive() && check_category_family($categories, $bloggParentCatIds)) {
@@ -23,8 +24,9 @@ switch ($sidebarType) {
     $mainWidth = 'col-md-8';
     $sidebarWidth = 'col-md-4';
     ob_start();
+    if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("blog-list-up")) : endif;
     include ('snippets/blogpuffs.php');
-    if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("sidebar1")) : endif;
+    if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("blog-list-down")) : endif;
     $sidebars = ob_get_clean();
     break;
   case 'blogg_archive':

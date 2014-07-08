@@ -76,6 +76,18 @@ function spring_widgets_init() {
       'before_title' => '<div class="sidebar-header"><i class="fa fa-caret-right"></i> ',
       'after_title' => '</div>',
   ));
+  register_sidebar(array(
+      'name' => __('Blogg listning uppe'),
+      'id' => 'blog-list-up',
+      'before_title' => '<div class="sidebar-header"><i class="fa fa-caret-right"></i> ',
+      'after_title' => '</div>',
+  ));
+  register_sidebar(array(
+      'name' => __('Blogg listning nere'),
+      'id' => 'blog-list-down',
+      'before_title' => '<div class="sidebar-header"><i class="fa fa-caret-right"></i> ',
+      'after_title' => '</div>',
+  ));
 }
 
 add_action('widgets_init', 'spring_widgets_init');
