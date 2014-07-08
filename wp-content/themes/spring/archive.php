@@ -1,16 +1,13 @@
 <?php
 get_header();
 $sidebarType = 'standard';
-echo $_SERVER[REQUEST_URI];
 $categories = get_the_category();
 $bloggParentCatIds = array(132, 320);  //hardcoded categories - uggly hack this one! 
 if (is_archive() && check_category_family($categories, $bloggParentCatIds)) {
   $sidebarType = 'blogg_archive';
-  echo 'blogg_archive';
 }
 if ($_SERVER[REQUEST_URI] == "/kategori/bloggar/") {
   $sidebarType = 'general_blogg_archive';
-  echo 'general_blogg_archive';
 }    
 
 switch ($sidebarType) {
